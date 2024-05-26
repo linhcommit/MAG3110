@@ -7,6 +7,7 @@
 #include "board.h"
 #include "pin_mux.h"
 
+
 void LCD_Init(void)
 {
 	slcd_config_t config;
@@ -34,7 +35,7 @@ void LCD_Init(void)
 	SLCD_Init(LCD, &config);
 }
 
-void LCD_Display_All(void)
+void LCD_DisplayAll(void)
 {
 	/* Set SLCD back plane phase. */
 	SLCD_SetBackPlanePhase(LCD, 40, kSLCD_PhaseAActivate); /* SLCD COM1 --- LCD_P40. */
@@ -55,7 +56,7 @@ void LCD_Display_All(void)
 	SLCD_StartDisplay(LCD);
 }
 
-void LCD_Set_Num(uint8_t dig, uint8_t num, bool isShowZero)
+void LCD_SetNum(uint8_t dig, uint8_t num, bool isShowZero,bool isShowDot)
 {
 	uint32_t pin1, pin2;
 	switch (dig)
@@ -77,77 +78,149 @@ void LCD_Set_Num(uint8_t dig, uint8_t num, bool isShowZero)
 		pin2 = 11;
 		break;
 	}
+	
+	uint8_t pin1Phase,pin2Phase;
 
 	switch (num)
 	{
 	case 1:
-		SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_NoPhaseActivate);
-		SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseBActivate | kSLCD_PhaseCActivate);
+		pin1Phase =  kSLCD_NoPhaseActivate;
+		pin2Phase =  kSLCD_PhaseBActivate | kSLCD_PhaseCActivate;
 		break;
 	case 2:
-		SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseCActivate);
-		SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
+		pin1Phase =  kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseCActivate;
+		pin2Phase =  kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
 		break;
 	case 3:
-		SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_PhaseAActivate | kSLCD_PhaseCActivate);
-		SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
+		pin1Phase =  kSLCD_PhaseAActivate | kSLCD_PhaseCActivate;
+		pin2Phase =  kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
 		break;
 	case 4:
-		SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
-		SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseBActivate | kSLCD_PhaseCActivate);
+		pin1Phase =  kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
+		pin2Phase =  kSLCD_PhaseBActivate | kSLCD_PhaseCActivate;
 		break;
 	case 5:
-		SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_PhaseAActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
-		SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseBActivate | kSLCD_PhaseDActivate);
+		pin1Phase =  kSLCD_PhaseAActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
+		pin2Phase =  kSLCD_PhaseBActivate | kSLCD_PhaseDActivate;
 		break;
 	case 6:
-		SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
-		SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseBActivate | kSLCD_PhaseDActivate);
+		pin1Phase =  kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
+		pin2Phase =  kSLCD_PhaseBActivate | kSLCD_PhaseDActivate;
 		break;
 	case 7:
-		SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_NoPhaseActivate);
-		SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
+		pin1Phase =  kSLCD_NoPhaseActivate;
+		pin2Phase =  kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
 		break;
 	case 8:
-		SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
-		SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
+		pin1Phase =  kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
+		pin2Phase =  kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
 		break;
 	case 9:
-		SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_PhaseAActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
-		SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
+		pin1Phase =  kSLCD_PhaseAActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
+		pin2Phase =  kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
 		break;
 	default:
 		if (isShowZero)
 		{
-			SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseDActivate);
-			SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
+			pin1Phase =  kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseDActivate;
+			pin2Phase =  kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate;
 		}
 		else
 		{
-			SLCD_SetFrontPlaneSegments(LCD, pin1, kSLCD_NoPhaseActivate);
-			SLCD_SetFrontPlaneSegments(LCD, pin2, kSLCD_NoPhaseActivate);
+			pin1Phase =  kSLCD_NoPhaseActivate;
+			pin2Phase =  kSLCD_NoPhaseActivate;
 		}
 		break;
 	}
+	if(isShowDot) pin2Phase |= kSLCD_PhaseAActivate;
+	
+	SLCD_SetFrontPlaneSegments(LCD, pin1, pin1Phase); 
+	SLCD_SetFrontPlaneSegments(LCD, pin2, pin2Phase);
 }
 
 void LCD_DisplayDemical(uint16_t val)
 {
-	uint8_t led1 = val / 1000;
-	uint8_t led2 = (val - (val / 1000) * 1000) / 100;
-	uint8_t led3 = (val - (val / 100) * 100) / 10;
-	uint8_t led4 = val - (val / 10) * 10;
+	if(val > 9999)
+	{
+		LCD_DisplayError();
+		return;
+	}
 
 	SLCD_SetBackPlanePhase(LCD, 40, kSLCD_PhaseAActivate);
 	SLCD_SetBackPlanePhase(LCD, 52, kSLCD_PhaseBActivate);
 	SLCD_SetBackPlanePhase(LCD, 19, kSLCD_PhaseCActivate);
 	SLCD_SetBackPlanePhase(LCD, 18, kSLCD_PhaseDActivate);
 
-	LCD_Set_Num(1, led1, false);
-	LCD_Set_Num(2, led2, led1 > 0);
-	LCD_Set_Num(3, led3, led1 > 0 || led2 > 0);
-	LCD_Set_Num(4, led4, true);
+	uint8_t seg1 = val / 1000;
+	uint8_t seg2 = (val - (val / 1000) * 1000) / 100;
+	uint8_t seg3 = (val - (val / 100) * 100) / 10;
+	uint8_t seg4 = val - (val / 10) * 10;
 
+	LCD_SetNum(1, seg1, false,false);
+	LCD_SetNum(2, seg2, seg1 > 0,false);
+	LCD_SetNum(3, seg3, seg1 > 0 || seg2 > 0,false);
+	LCD_SetNum(4, seg4, true,false);
+
+	SLCD_StartDisplay(LCD);
+}
+
+void LCD_DisplayError(){
+	SLCD_SetBackPlanePhase(LCD, 40, kSLCD_PhaseAActivate);
+	SLCD_SetBackPlanePhase(LCD, 52, kSLCD_PhaseBActivate);
+	SLCD_SetBackPlanePhase(LCD, 19, kSLCD_PhaseCActivate);
+	SLCD_SetBackPlanePhase(LCD, 18, kSLCD_PhaseDActivate);
+	
+	SLCD_SetFrontPlaneSegments(LCD,37,kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseCActivate | kSLCD_PhaseDActivate);
+	SLCD_SetFrontPlaneSegments(LCD,17,kSLCD_PhaseDActivate);
+	SLCD_SetFrontPlaneSegments(LCD,7, kSLCD_PhaseBActivate | kSLCD_PhaseCActivate);
+	SLCD_SetFrontPlaneSegments(LCD,8, kSLCD_NoPhaseActivate);
+	SLCD_SetFrontPlaneSegments(LCD,53,kSLCD_PhaseBActivate | kSLCD_PhaseCActivate);
+	SLCD_SetFrontPlaneSegments(LCD,38,kSLCD_NoPhaseActivate);
+	SLCD_SetFrontPlaneSegments(LCD,10,kSLCD_PhaseAActivate | kSLCD_PhaseBActivate | kSLCD_PhaseCActivate);
+	SLCD_SetFrontPlaneSegments(LCD,11,kSLCD_PhaseBActivate);
+	
+	SLCD_StartDisplay(LCD);
+}
+
+void LCD_DisplayTime(uint8_t num1,uint8_t num2){
+
+	if(num1 >99 || num2 > 99)
+	{
+		LCD_DisplayError();
+		return;
+	}
+
+	SLCD_SetBackPlanePhase(LCD, 40, kSLCD_PhaseAActivate);
+	SLCD_SetBackPlanePhase(LCD, 52, kSLCD_PhaseBActivate);
+	SLCD_SetBackPlanePhase(LCD, 19, kSLCD_PhaseCActivate);
+	SLCD_SetBackPlanePhase(LCD, 18, kSLCD_PhaseDActivate);
+	
+	uint8_t seg1 = num1 / 10;
+	uint8_t seg2 = num1 % 10;
+	uint8_t seg3 = num2 / 10;
+	uint8_t seg4 = num2 % 10;
+	
+	LCD_SetNum(1, seg1, false, false);
+	LCD_SetNum(2, seg2, seg1 > 0, false);
+	LCD_SetNum(3, seg3, true, false);
+	LCD_SetNum(4, seg4, true, true);
+	
+	SLCD_StartDisplay(LCD);
+}
+
+void LCD_StopDisplay(){
+	SLCD_StopDisplay(LCD);
+}
+
+void LCD_StartBlinkMode(){
+	SLCD_StartBlinkMode(LCD, kSLCD_BlankDisplayBlink, kSLCD_BlinkRate01);
+}
+
+void LCD_StopBlinkMode(){
+	SLCD_StopBlinkMode(LCD);
+}
+
+void LCD_StartDisplay(){
 	SLCD_StartDisplay(LCD);
 }
 
