@@ -31,16 +31,23 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+
+
 /* clang-format off */
 /*
- * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-!!GlobalInfo
-product: Pins v3.0
-processor: MKL46Z256xxx4
+ * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 
-mcu_data: ksdk2_0
-processor_version: 0.0.9
+!!GlobalInfo
+
+product: Pins v3.0
+
+processor: MKL46Z256xxx4
+
+
+mcu_data: ksdk2_0
+
+processor_version: 0.0.9
+
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -62,12 +69,18 @@ void BOARD_InitBootPins(void)
 
 /* clang-format off */
 /*
- * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_InitPins:
-- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
-- pin_list:
-  - {pin_num: '35', peripheral: UART0, signal: RX, pin_signal: TSI0_CH2/PTA1/UART0_RX/TPM2_CH0}
-  - {pin_num: '36', peripheral: UART0, signal: TX, pin_signal: TSI0_CH3/PTA2/UART0_TX/TPM2_CH1}
+ * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+
+BOARD_InitPins:
+
+- options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
+
+- pin_list:
+
+  - {pin_num: '35', peripheral: UART0, signal: RX, pin_signal: TSI0_CH2/PTA1/UART0_RX/TPM2_CH0}
+
+  - {pin_num: '36', peripheral: UART0, signal: TX, pin_signal: TSI0_CH3/PTA2/UART0_TX/TPM2_CH1}
+
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */
@@ -98,6 +111,45 @@ void BOARD_InitPins(void)
 
                   /* UART0 Receive Data Source Select: UART_RX pin. */
                   | SIM_SOPT5_UART0RXSRC(SOPT5_UART0RXSRC_UART_RX));
+}
+/***********************************************************************************************************************
+ * EOF
+ **********************************************************************************************************************/
+ /* FUNCTION ************************************************************************************************************
+ *
+ * Function Name : BOARD_I2C_ConfigurePins
+ *
+ * END ****************************************************************************************************************/
+void BOARD_I2C_ConfigurePins(void)
+{
+    /* Port E Clock Gate Control: Clock enabled */
+    CLOCK_EnableClock(kCLOCK_PortE);
+
+    const port_pin_config_t porte24_pin31_config = {/* Internal pull-up resistor is enabled */
+                                                    kPORT_PullUp,
+                                                    /* Slow slew rate is configured */
+                                                    kPORT_SlowSlewRate,
+                                                    /* Passive filter is disabled */
+                                                    kPORT_PassiveFilterDisable,
+                                                    /* Low drive strength is configured */
+                                                    kPORT_LowDriveStrength,
+                                                    /* Pin is configured as I2C0_SCL */
+                                                    kPORT_MuxAlt5};
+    /* PORTE24 (pin 31) is configured as I2C0_SCL */
+    PORT_SetPinConfig(PORTE, 24U, &porte24_pin31_config);
+
+    const port_pin_config_t porte25_pin32_config = {/* Internal pull-up resistor is enabled */
+                                                    kPORT_PullUp,
+                                                    /* Slow slew rate is configured */
+                                                    kPORT_SlowSlewRate,
+                                                    /* Passive filter is disabled */
+                                                    kPORT_PassiveFilterDisable,
+                                                    /* Low drive strength is configured */
+                                                    kPORT_LowDriveStrength,
+                                                    /* Pin is configured as I2C0_SDA */
+                                                    kPORT_MuxAlt5};
+    /* PORTE25 (pin 32) is configured as I2C0_SDA */
+    PORT_SetPinConfig(PORTE, 25U, &porte25_pin32_config);
 }
 /***********************************************************************************************************************
  * EOF

@@ -31,7 +31,8 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+
+
 #ifndef _PIN_MUX_H_
 #define _PIN_MUX_H_
 
@@ -65,6 +66,7 @@ extern "C" {
  *
  */
 void BOARD_InitBootPins(void);
+void BOARD_I2C_ConfigurePins(void);
 
 #define SOPT5_UART0RXSRC_UART_RX 0x00u /*!<@brief UART0 Receive Data Source Select: UART_RX pin */
 #define SOPT5_UART0TXSRC_UART_TX 0x00u /*!<@brief UART0 Transmit Data Source Select: UART0_TX pin */
