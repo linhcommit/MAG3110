@@ -36,9 +36,9 @@ int main(void)
 		//if((PTD->PDIR & (1<<1)) != 0) continue;
 		
 		read_i2c(MAG3110_I2C_ADDR, 1, rxBuff, 6);
-		uint8_t x = ((int16_t)(((rxBuff[0] * 256U) | rxBuff[1]))) / 4U;
-		uint8_t y = ((int16_t)(((rxBuff[2] * 256U) | rxBuff[3]))) / 4U;
-		uint8_t z = ((int16_t)(((rxBuff[4] * 256U) | rxBuff[5]))) / 4U;
+		uint16_t x = (int16_t)(((rxBuff[0] * 256U) | rxBuff[1]));
+		uint16_t y = (int16_t)(((rxBuff[2] * 256U) | rxBuff[3]));
+		uint16_t z = (int16_t)(((rxBuff[4] * 256U) | rxBuff[5]));
 
 		PRINTF("status_reg = 0x%x , x = %5d , y = %5d , z = %5d\r\n", PTD->PDIR & (1<<1), x, y, z);
 		

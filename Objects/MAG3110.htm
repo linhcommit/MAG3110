@@ -1,0 +1,1581 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Objects\MAG3110.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Objects\MAG3110.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed May 29 11:34:13 2024
+<BR><P>
+<H3>Maximum Stack Usage =        384 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+__rt_entry_main &rArr; main &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertRadixNumToString &rArr; __aeabi_idivmod
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[f]">NMI_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[f]">NMI_Handler</a><BR>
+ <LI><a href="#[10]">HardFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[10]">HardFault_Handler</a><BR>
+ <LI><a href="#[11]">SVC_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[11]">SVC_Handler</a><BR>
+ <LI><a href="#[12]">PendSV_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[12]">PendSV_Handler</a><BR>
+ <LI><a href="#[13]">SysTick_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[13]">SysTick_Handler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[23]">ADC0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[24]">CMP0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[2d]">DAC0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[36]">DMA0_DriverIRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[14]">DMA0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[37]">DMA1_DriverIRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[15]">DMA1_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[38]">DMA2_DriverIRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[16]">DMA2_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[39]">DMA3_DriverIRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[17]">DMA3_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[43]">DbgConsole_RelocateLog</a> from fsl_debug_console.o(i.DbgConsole_RelocateLog) referenced from fsl_debug_console.o(i.DbgConsole_Printf)
+ <LI><a href="#[42]">DefaultISR</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[19]">FTFA_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[10]">HardFault_Handler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[3a]">I2C0_DriverIRQHandler</a> from fsl_i2c.o(i.I2C0_DriverIRQHandler) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[1c]">I2C0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[3b]">I2C1_DriverIRQHandler</a> from fsl_i2c.o(i.I2C1_DriverIRQHandler) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[1d]">I2C1_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[41]">I2S0_DriverIRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[2b]">I2S0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[31]">LCD_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[1b]">LLWU_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[30]">LPTMR0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[1a]">LVD_LVW_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[2f]">MCG_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[f]">NMI_Handler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[2a]">PIT_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[32]">PORTA_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[33]">PORTC_PORTD_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[12]">PendSV_Handler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[28]">RTC_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[29]">RTC_Seconds_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[18]">Reserved20_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[44]">Reset_Handler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[3c]">SPI0_DriverIRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[1e]">SPI0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[3d]">SPI1_DriverIRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[1f]">SPI1_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[11]">SVC_Handler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[13]">SysTick_Handler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[34]">SystemInit</a> from system_mkl46z4.o(i.SystemInit) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[25]">TPM0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[26]">TPM1_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[27]">TPM2_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[2e]">TSI0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[3e]">UART0_DriverIRQHandler</a> from fsl_lpsci.o(i.UART0_DriverIRQHandler) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[20]">UART0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[3f]">UART1_DriverIRQHandler</a> from fsl_uart.o(i.UART1_DriverIRQHandler) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[21]">UART1_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[40]">UART2_DriverIRQHandler</a> from fsl_uart.o(i.UART2_DriverIRQHandler) referenced from startup_mkl46z4.o(.text)
+ <LI><a href="#[22]">UART2_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[2c]">USB0_IRQHandler</a> from startup_mkl46z4.o(.text) referenced from startup_mkl46z4.o(RESET)
+ <LI><a href="#[45]">__main</a> from __main.o(!!!main) referenced from startup_mkl46z4.o(.text)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[45]"></a>__main</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, __main.o(!!!main))
+<BR><BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+</UL>
+
+<P><STRONG><a name="[46]"></a>__scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter))
+<BR><BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
+
+<P><STRONG><a name="[48]"></a>__scatterload_rt2</STRONG> (Thumb, 52 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
+</UL>
+
+<P><STRONG><a name="[d9]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+
+<P><STRONG><a name="[da]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+
+<P><STRONG><a name="[49]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
+</UL>
+
+<P><STRONG><a name="[db]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+
+<P><STRONG><a name="[4b]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
+</UL>
+
+<P><STRONG><a name="[dc]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+
+<P><STRONG><a name="[dd]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
+
+<P><STRONG><a name="[de]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+
+<P><STRONG><a name="[df]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+
+<P><STRONG><a name="[e0]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+
+<P><STRONG><a name="[e1]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+
+<P><STRONG><a name="[e2]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
+
+<P><STRONG><a name="[e3]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+
+<P><STRONG><a name="[e4]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+
+<P><STRONG><a name="[e5]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
+
+<P><STRONG><a name="[e6]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
+
+<P><STRONG><a name="[e7]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+
+<P><STRONG><a name="[e8]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+
+<P><STRONG><a name="[e9]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+
+<P><STRONG><a name="[ea]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+
+<P><STRONG><a name="[eb]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+
+<P><STRONG><a name="[ec]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+
+<P><STRONG><a name="[ed]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
+
+<P><STRONG><a name="[ee]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+
+<P><STRONG><a name="[ef]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+
+<P><STRONG><a name="[f0]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+
+<P><STRONG><a name="[50]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
+</UL>
+
+<P><STRONG><a name="[f1]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+
+<P><STRONG><a name="[f2]"></a>__rt_lib_shutdown_fini_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+
+<P><STRONG><a name="[f3]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000009))
+
+<P><STRONG><a name="[f4]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000011))
+
+<P><STRONG><a name="[f5]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000012))
+
+<P><STRONG><a name="[f6]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+
+<P><STRONG><a name="[f7]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000006))
+
+<P><STRONG><a name="[f8]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E))
+
+<P><STRONG><a name="[47]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
+
+<P><STRONG><a name="[f9]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+
+<P><STRONG><a name="[fa]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry7.o(.ARM.Collect$$rtentry$$00000007))
+
+<P><STRONG><a name="[4a]"></a>__rt_entry_li</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000A))
+<BR><BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
+</UL>
+
+<P><STRONG><a name="[fb]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+
+<P><STRONG><a name="[4c]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
+<BR><BR>[Stack]<UL><LI>Max Depth = 384 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertRadixNumToString &rArr; __aeabi_idivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
+</UL>
+
+<P><STRONG><a name="[fc]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+
+<P><STRONG><a name="[70]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
+</UL>
+
+<P><STRONG><a name="[4f]"></a>__rt_exit_ls</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000003))
+<BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
+</UL>
+
+<P><STRONG><a name="[fd]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+
+<P><STRONG><a name="[51]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
+</UL>
+
+<P><STRONG><a name="[44]"></a>Reset_Handler</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+
+<P><STRONG><a name="[f]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[10]"></a>HardFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[11]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[12]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PendSV_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PendSV_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[13]"></a>SysTick_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[14]"></a>DMA0_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[15]"></a>DMA1_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[16]"></a>DMA2_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[17]"></a>DMA3_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[1c]"></a>I2C0_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[1d]"></a>I2C1_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[1e]"></a>SPI0_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[1f]"></a>SPI1_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[20]"></a>UART0_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[21]"></a>UART1_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[22]"></a>UART2_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[2b]"></a>I2S0_IRQHandler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[23]"></a>ADC0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[24]"></a>CMP0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[2d]"></a>DAC0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[36]"></a>DMA0_DriverIRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[37]"></a>DMA1_DriverIRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[38]"></a>DMA2_DriverIRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[39]"></a>DMA3_DriverIRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[42]"></a>DefaultISR</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[19]"></a>FTFA_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[41]"></a>I2S0_DriverIRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[31]"></a>LCD_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[1b]"></a>LLWU_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[30]"></a>LPTMR0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[1a]"></a>LVD_LVW_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[2f]"></a>MCG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[2a]"></a>PIT_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[32]"></a>PORTA_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[33]"></a>PORTC_PORTD_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[28]"></a>RTC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[29]"></a>RTC_Seconds_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[18]"></a>Reserved20_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[3c]"></a>SPI0_DriverIRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[3d]"></a>SPI1_DriverIRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[25]"></a>TPM0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[26]"></a>TPM1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[27]"></a>TPM2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[2e]"></a>TSI0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[2c]"></a>USB0_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_mkl46z4.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(RESET)
+</UL>
+<P><STRONG><a name="[53]"></a>__aeabi_assert</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, assert.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
+<LI>Call Chain = __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SetPbeMode
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPll0Freq
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOsc0ErClkFreq
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetEr32kClkFreq
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_EnablePll0
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetMcgExtClkFreq
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORT_SetPinConfig
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_BootToPeeMode
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Init
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_Init
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_GetDefaultConfig
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterInit
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterGetDefaultConfig
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_WriteBlocking
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_ReadBlocking
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_Init
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_GetInstance
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_GetDefaultConfig
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_GetInstance
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_ReadBlocking
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_GetInstance
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_GetDefaultConfig
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_GetInstance
+</UL>
+
+<P><STRONG><a name="[fe]"></a>__assert</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, assert.o(.text), UNUSED)
+
+<P><STRONG><a name="[c1]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 12 bytes, strlen.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strlen
+</UL>
+<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
+</UL>
+
+<P><STRONG><a name="[58]"></a>_memset_w</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memclr_w
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset
+</UL>
+
+<P><STRONG><a name="[57]"></a>_memset</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset_w
+</UL>
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+</UL>
+
+<P><STRONG><a name="[59]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset
+</UL>
+
+<P><STRONG><a name="[ff]"></a>__rt_memclr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
+
+<P><STRONG><a name="[97]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+</UL>
+
+<P><STRONG><a name="[100]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
+
+<P><STRONG><a name="[5a]"></a>__rt_memclr_w</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset_w
+</UL>
+
+<P><STRONG><a name="[101]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text), UNUSED)
+
+<P><STRONG><a name="[8c]"></a>__aeabi_uidivmod</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPll0Freq
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllExtRefClkFreq
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_Init
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterSetBaudRate
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertRadixNumToString
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+</UL>
+
+<P><STRONG><a name="[102]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
+
+<P><STRONG><a name="[55]"></a>__aeabi_idivmod</STRONG> (Thumb, 326 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayDemical
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertRadixNumToString
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+
+<P><STRONG><a name="[d6]"></a>__aeabi_d2uiz</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, dfixui.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_d2uiz
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[103]"></a>_dfixu</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, dfixui.o(.text), UNUSED)
+
+<P><STRONG><a name="[5c]"></a>__aeabi_i2d_normalise</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, dflti.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+</UL>
+
+<P><STRONG><a name="[5b]"></a>__aeabi_i2d</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, dflti.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d_normalise
+</UL>
+
+<P><STRONG><a name="[104]"></a>_dflt</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflti.o(.text), UNUSED)
+
+<P><STRONG><a name="[5d]"></a>__aeabi_ui2d</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dflti.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d_normalise
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[105]"></a>_dfltu</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflti.o(.text), UNUSED)
+
+<P><STRONG><a name="[c6]"></a>__aeabi_dmul</STRONG> (Thumb, 0 bytes, Stack size 56 bytes, dmul.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = __aeabi_dmul
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+</UL>
+
+<P><STRONG><a name="[106]"></a>_dmul</STRONG> (Thumb, 558 bytes, Stack size 56 bytes, dmul.o(.text), UNUSED)
+
+<P><STRONG><a name="[5e]"></a>__read_errno</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, _rserrno.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
+</UL>
+
+<P><STRONG><a name="[60]"></a>__set_errno</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, _rserrno.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __set_errno
+</UL>
+<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan2
+</UL>
+
+<P><STRONG><a name="[56]"></a>abort</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, abort.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
+<LI>Call Chain = abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+
+<P><STRONG><a name="[54]"></a>__assert_puts</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, assert_puts.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __assert_puts &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ttywrch
+</UL>
+<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+
+<P><STRONG><a name="[c7]"></a>__aeabi_dadd</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, daddsub.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_dadd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan2
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+</UL>
+
+<P><STRONG><a name="[63]"></a>_dadd</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, daddsub.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsub1
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dadd1
+</UL>
+
+<P><STRONG><a name="[ce]"></a>__aeabi_dsub</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, daddsub.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_dsub
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan2
+</UL>
+
+<P><STRONG><a name="[66]"></a>_dsub</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, daddsub.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsub1
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dadd1
+</UL>
+
+<P><STRONG><a name="[d0]"></a>__aeabi_drsub</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, daddsub.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_drsub
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan2
+</UL>
+
+<P><STRONG><a name="[67]"></a>_drsb</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, daddsub.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsub1
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dadd1
+</UL>
+
+<P><STRONG><a name="[cf]"></a>__aeabi_ddiv</STRONG> (Thumb, 0 bytes, Stack size 64 bytes, ddiv.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = __aeabi_ddiv
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan2
+</UL>
+
+<P><STRONG><a name="[69]"></a>_ddiv</STRONG> (Thumb, 1072 bytes, Stack size 64 bytes, ddiv.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_drdiv
+</UL>
+
+<P><STRONG><a name="[68]"></a>_drdiv</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, ddiv.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ddiv
+</UL>
+
+<P><STRONG><a name="[62]"></a>_ttywrch</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, sys_wrch.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _ttywrch
+</UL>
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__default_signal_display
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
+</UL>
+
+<P><STRONG><a name="[52]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sig_exit
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
+</UL>
+
+<P><STRONG><a name="[5f]"></a>__aeabi_errno_addr</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__read_errno
+</UL>
+
+<P><STRONG><a name="[107]"></a>__errno$intlibspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
+
+<P><STRONG><a name="[108]"></a>__rt_errno_addr$intlibspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
+
+<P><STRONG><a name="[61]"></a>__rt_SIGABRT</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, defsig_abrt_outer.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT_inner
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sig_exit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
+</UL>
+
+<P><STRONG><a name="[6c]"></a>__fpl_dcmp_InfNaN</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, dcmpin.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dcheck_NaN2
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_cmpreturn
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpeq
+</UL>
+
+<P><STRONG><a name="[c9]"></a>__ARM_scalbn</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, dscalbn.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __ARM_scalbn
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+</UL>
+
+<P><STRONG><a name="[109]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[10a]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[10b]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, indicate_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[4e]"></a>exit</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, exit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = exit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_call_atexit_fns (Weak Reference)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
+</UL>
+
+<P><STRONG><a name="[6b]"></a>__sig_exit</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, defsig_exit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __sig_exit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT
+</UL>
+
+<P><STRONG><a name="[6a]"></a>__rt_SIGABRT_inner</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, defsig_abrt_inner.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__default_signal_display
+</UL>
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT
+</UL>
+
+<P><STRONG><a name="[6d]"></a>__fpl_cmpreturn</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, cmpret.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_return_NaN
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dcmp_InfNaN
+</UL>
+
+<P><STRONG><a name="[6e]"></a>__fpl_dcheck_NaN2</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, dnan2.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_return_NaN
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dcmp_InfNaN
+</UL>
+
+<P><STRONG><a name="[71]"></a>__default_signal_display</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, defsig_general.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ttywrch
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT_inner
+</UL>
+
+<P><STRONG><a name="[72]"></a>__fpl_return_NaN</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, retnan.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_cmpreturn
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dcheck_NaN2
+</UL>
+
+<P><STRONG><a name="[73]"></a>BOARD_BootClockRUN</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, clock_config.o(i.BOARD_BootClockRUN))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
+<LI>Call Chain = BOARD_BootClockRUN &rArr; CLOCK_BootToPeeMode &rArr; CLOCK_SetPbeMode &rArr; CLOCK_EnablePll0 &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SetSimConfig
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SetInternalRefClkConfig
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_InitOsc0
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_BootToPeeMode
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_CONFIG_SetFllExtRefDiv
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_i2c
+</UL>
+
+<P><STRONG><a name="[79]"></a>BOARD_I2C_ConfigurePins</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, pin_mux.o(i.BOARD_I2C_ConfigurePins))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
+<LI>Call Chain = BOARD_I2C_ConfigurePins &rArr; PORT_SetPinConfig &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORT_SetPinConfig
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_EnableClock
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_i2c
+</UL>
+
+<P><STRONG><a name="[7c]"></a>BOARD_InitDebugConsole</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, board.o(i.BOARD_InitDebugConsole))
+<BR><BR>[Stack]<UL><LI>Max Depth = 240 + Unknown Stack Size
+<LI>Call Chain = BOARD_InitDebugConsole &rArr; DbgConsole_Init &rArr; LOG_Init &rArr; IO_Init &rArr; LPSCI_Init &rArr; LPSCI_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Init
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFllSelClkFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_i2c
+</UL>
+
+<P><STRONG><a name="[7f]"></a>BOARD_InitPins</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, pin_mux.o(i.BOARD_InitPins))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = BOARD_InitPins &rArr; PORT_SetPinMux
+</UL>
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORT_SetPinMux
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_EnableClock
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_i2c
+</UL>
+
+<P><STRONG><a name="[76]"></a>CLOCK_BootToPeeMode</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, fsl_clock.o(i.CLOCK_BootToPeeMode))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112 + Unknown Stack Size
+<LI>Call Chain = CLOCK_BootToPeeMode &rArr; CLOCK_SetPbeMode &rArr; CLOCK_EnablePll0 &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SetPbeMode
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SetExternalRefClkConfig
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_BootClockRUN
+</UL>
+
+<P><STRONG><a name="[83]"></a>CLOCK_EnablePll0</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, fsl_clock.o(i.CLOCK_EnablePll0))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
+<LI>Call Chain = CLOCK_EnablePll0 &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_SetPbeMode
+</UL>
+
+<P><STRONG><a name="[84]"></a>CLOCK_GetEr32kClkFreq</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetEr32kClkFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetEr32kClkFreq &rArr; CLOCK_GetOsc0ErClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOsc0ErClkFreq
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+</UL>
+
+<P><STRONG><a name="[86]"></a>CLOCK_GetFixedFreqClkFreq</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetFixedFreqClkFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetFixedFreqClkFreq &rArr; CLOCK_GetOutClkFreq &rArr; CLOCK_GetFllFreq &rArr; CLOCK_GetFllRefClkFreq &rArr; CLOCK_GetFllExtRefClkFreq &rArr; CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOutClkFreq
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllRefClkFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+</UL>
+
+<P><STRONG><a name="[8d]"></a>CLOCK_GetFllFreq</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, fsl_clock.o(i.CLOCK_GetFllFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetFllFreq &rArr; CLOCK_GetFllRefClkFreq &rArr; CLOCK_GetFllExtRefClkFreq &rArr; CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllRefClkFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOutClkFreq
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFllSelClkFreq
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+</UL>
+
+<P><STRONG><a name="[8e]"></a>CLOCK_GetFreq</STRONG> (Thumb, 172 bytes, Stack size 16 bytes, fsl_clock.o(i.CLOCK_GetFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetFreq &rArr; CLOCK_GetFixedFreqClkFreq &rArr; CLOCK_GetOutClkFreq &rArr; CLOCK_GetFllFreq &rArr; CLOCK_GetFllRefClkFreq &rArr; CLOCK_GetFllExtRefClkFreq &rArr; CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPll0Freq
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOutClkFreq
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOsc0ErClkFreq
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetInternalRefClkFreq
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllFreq
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFixedFreqClkFreq
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetEr32kClkFreq
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFllSelClkFreq
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_i2c
+</UL>
+
+<P><STRONG><a name="[8f]"></a>CLOCK_GetInternalRefClkFreq</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetInternalRefClkFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CLOCK_GetInternalRefClkFreq
+</UL>
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetInternalRefClkSelectFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+</UL>
+
+<P><STRONG><a name="[85]"></a>CLOCK_GetOsc0ErClkFreq</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetOsc0ErClkFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetOsc0ErClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetEr32kClkFreq
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+</UL>
+
+<P><STRONG><a name="[88]"></a>CLOCK_GetOutClkFreq</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetOutClkFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetOutClkFreq &rArr; CLOCK_GetFllFreq &rArr; CLOCK_GetFllRefClkFreq &rArr; CLOCK_GetFllExtRefClkFreq &rArr; CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPll0Freq
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllFreq
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetMcgExtClkFreq
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetInternalRefClkSelectFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFixedFreqClkFreq
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+</UL>
+
+<P><STRONG><a name="[90]"></a>CLOCK_GetPll0Freq</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetPll0Freq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetPll0Freq &rArr; CLOCK_GetPll0RefFreq &rArr; CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPll0RefFreq
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOutClkFreq
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPllFllSelClkFreq
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+</UL>
+
+<P><STRONG><a name="[7d]"></a>CLOCK_GetPllFllSelClkFreq</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetPllFllSelClkFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetPllFllSelClkFreq &rArr; CLOCK_GetFllFreq &rArr; CLOCK_GetFllRefClkFreq &rArr; CLOCK_GetFllExtRefClkFreq &rArr; CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPll0Freq
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitDebugConsole
+</UL>
+
+<P><STRONG><a name="[74]"></a>CLOCK_InitOsc0</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, fsl_clock.o(i.CLOCK_InitOsc0))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = CLOCK_InitOsc0
+</UL>
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOscRangeFromFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_BootClockRUN
+</UL>
+
+<P><STRONG><a name="[81]"></a>CLOCK_SetExternalRefClkConfig</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, fsl_clock.o(i.CLOCK_SetExternalRefClkConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_BootToPeeMode
+</UL>
+
+<P><STRONG><a name="[77]"></a>CLOCK_SetInternalRefClkConfig</STRONG> (Thumb, 166 bytes, Stack size 24 bytes, fsl_clock.o(i.CLOCK_SetInternalRefClkConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = CLOCK_SetInternalRefClkConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_BootClockRUN
+</UL>
+
+<P><STRONG><a name="[82]"></a>CLOCK_SetPbeMode</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, fsl_clock.o(i.CLOCK_SetPbeMode))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
+<LI>Call Chain = CLOCK_SetPbeMode &rArr; CLOCK_EnablePll0 &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_EnablePll0
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_BootToPeeMode
+</UL>
+
+<P><STRONG><a name="[78]"></a>CLOCK_SetSimConfig</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_SetSimConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CLOCK_SetSimConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_BootClockRUN
+</UL>
+
+<P><STRONG><a name="[7e]"></a>DbgConsole_Init</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, fsl_debug_console.o(i.DbgConsole_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
+<LI>Call Chain = DbgConsole_Init &rArr; LOG_Init &rArr; IO_Init &rArr; LPSCI_Init &rArr; LPSCI_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Init
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitDebugConsole
+</UL>
+
+<P><STRONG><a name="[96]"></a>DbgConsole_Printf</STRONG> (Thumb, 62 bytes, Stack size 160 bytes, fsl_debug_console.o(i.DbgConsole_Printf))
+<BR><BR>[Stack]<UL><LI>Max Depth = 344 + Unknown Stack Size
+<LI>Call Chain = DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertRadixNumToString &rArr; __aeabi_idivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[3a]"></a>I2C0_DriverIRQHandler</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, fsl_i2c.o(i.I2C0_DriverIRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = I2C0_DriverIRQHandler &rArr; I2C_TransferCommonIRQHandler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_TransferCommonIRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[3b]"></a>I2C1_DriverIRQHandler</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, fsl_i2c.o(i.I2C1_DriverIRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = I2C1_DriverIRQHandler &rArr; I2C_TransferCommonIRQHandler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_TransferCommonIRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[9b]"></a>I2C_GetInstance</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, fsl_i2c.o(i.I2C_GetInstance))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
+<LI>Call Chain = I2C_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterInit
+</UL>
+
+<P><STRONG><a name="[9c]"></a>I2C_MasterGetDefaultConfig</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, fsl_i2c.o(i.I2C_MasterGetDefaultConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = I2C_MasterGetDefaultConfig &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_i2c
+</UL>
+
+<P><STRONG><a name="[a4]"></a>I2C_MasterGetStatusFlags</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, fsl_i2c.o(i.I2C_MasterGetStatusFlags))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterStart
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterRepeatedStart
+</UL>
+
+<P><STRONG><a name="[9d]"></a>I2C_MasterInit</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, fsl_i2c.o(i.I2C_MasterInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
+<LI>Call Chain = I2C_MasterInit &rArr; I2C_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterSetBaudRate
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_GetInstance
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterClearStatusFlags
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_EnableClock
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_i2c
+</UL>
+
+<P><STRONG><a name="[a1]"></a>I2C_MasterReadBlocking</STRONG> (Thumb, 146 bytes, Stack size 28 bytes, fsl_i2c.o(i.I2C_MasterReadBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = I2C_MasterReadBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterStop
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+</UL>
+
+<P><STRONG><a name="[a3]"></a>I2C_MasterRepeatedStart</STRONG> (Thumb, 104 bytes, Stack size 32 bytes, fsl_i2c.o(i.I2C_MasterRepeatedStart))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = I2C_MasterRepeatedStart
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterGetStatusFlags
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+</UL>
+
+<P><STRONG><a name="[a0]"></a>I2C_MasterSetBaudRate</STRONG> (Thumb, 136 bytes, Stack size 56 bytes, fsl_i2c.o(i.I2C_MasterSetBaudRate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = I2C_MasterSetBaudRate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterInit
+</UL>
+
+<P><STRONG><a name="[a5]"></a>I2C_MasterStart</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, fsl_i2c.o(i.I2C_MasterStart))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = I2C_MasterStart
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterGetStatusFlags
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+</UL>
+
+<P><STRONG><a name="[a2]"></a>I2C_MasterStop</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, fsl_i2c.o(i.I2C_MasterStop))
+<BR><BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterWriteBlocking
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterReadBlocking
+</UL>
+
+<P><STRONG><a name="[a6]"></a>I2C_MasterTransferBlocking</STRONG> (Thumb, 388 bytes, Stack size 24 bytes, fsl_i2c.o(i.I2C_MasterTransferBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
+<LI>Call Chain = I2C_MasterTransferBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterWriteBlocking
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterStop
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterStart
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterRepeatedStart
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterReadBlocking
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterClearStatusFlags
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_CheckAndClearError
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_i2c
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_i2c
+</UL>
+
+<P><STRONG><a name="[a8]"></a>I2C_MasterWriteBlocking</STRONG> (Thumb, 162 bytes, Stack size 40 bytes, fsl_i2c.o(i.I2C_MasterWriteBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = I2C_MasterWriteBlocking
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterStop
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+</UL>
+
+<P><STRONG><a name="[a9]"></a>IO_Init</STRONG> (Thumb, 226 bytes, Stack size 32 bytes, fsl_io.o(i.IO_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
+<LI>Call Chain = IO_Init &rArr; LPSCI_Init &rArr; LPSCI_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_Init
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_GetDefaultConfig
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_GetDefaultConfig
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Init
+</UL>
+
+<P><STRONG><a name="[ae]"></a>IO_Transfer</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, fsl_io.o(i.IO_Transfer))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112 + Unknown Stack Size
+<LI>Call Chain = IO_Transfer &rArr; LPSCI_ReadBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_WriteBlocking
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_ReadBlocking
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WriteBlocking
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_ReadBlocking
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Pop
+</UL>
+
+<P><STRONG><a name="[b3]"></a>LCD_DisplayDemical</STRONG> (Thumb, 220 bytes, Stack size 32 bytes, lcd.o(i.LCD_DisplayDemical))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = LCD_DisplayDemical &rArr; LCD_SetNum &rArr; __ARM_common_switch8
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetNum
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayError
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_StartDisplay
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_SetBackPlanePhase
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[b4]"></a>LCD_DisplayError</STRONG> (Thumb, 130 bytes, Stack size 8 bytes, lcd.o(i.LCD_DisplayError))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LCD_DisplayError
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_StartDisplay
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_SetFrontPlaneSegments
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_SetBackPlanePhase
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayDemical
+</UL>
+
+<P><STRONG><a name="[b9]"></a>LCD_Init</STRONG> (Thumb, 66 bytes, Stack size 40 bytes, lcd.o(i.LCD_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
+<LI>Call Chain = LCD_Init &rArr; BOARD_BootClockRUN &rArr; CLOCK_BootToPeeMode &rArr; CLOCK_SetPbeMode &rArr; CLOCK_EnablePll0 &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_Init
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_GetDefaultConfig
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitPins
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_BootClockRUN
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[b6]"></a>LCD_SetNum</STRONG> (Thumb, 178 bytes, Stack size 40 bytes, lcd.o(i.LCD_SetNum))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = LCD_SetNum &rArr; __ARM_common_switch8
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_SetFrontPlaneSegments
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayDemical
+</UL>
+
+<P><STRONG><a name="[95]"></a>LOG_Init</STRONG> (Thumb, 30 bytes, Stack size 32 bytes, fsl_log.o(i.LOG_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 208 + Unknown Stack Size
+<LI>Call Chain = LOG_Init &rArr; IO_Init &rArr; LPSCI_Init &rArr; LPSCI_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Init
+</UL>
+
+<P><STRONG><a name="[bc]"></a>LOG_Pop</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, fsl_log.o(i.LOG_Pop))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
+<LI>Call Chain = LOG_Pop &rArr; IO_Transfer &rArr; LPSCI_ReadBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
+</UL>
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
+</UL>
+
+<P><STRONG><a name="[99]"></a>LOG_Push</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, fsl_log.o(i.LOG_Push))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
+<LI>Call Chain = LOG_Push &rArr; LOG_Pop &rArr; IO_Transfer &rArr; LPSCI_ReadBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Pop
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_RelocateLog
+</UL>
+
+<P><STRONG><a name="[bf]"></a>LPSCI_ClearStatusFlags</STRONG> (Thumb, 92 bytes, Stack size 12 bytes, fsl_lpsci.o(i.LPSCI_ClearStatusFlags))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = LPSCI_ClearStatusFlags
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_ReadBlocking
+</UL>
+
+<P><STRONG><a name="[ac]"></a>LPSCI_GetDefaultConfig</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, fsl_lpsci.o(i.LPSCI_GetDefaultConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = LPSCI_GetDefaultConfig &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+</UL>
+
+<P><STRONG><a name="[bd]"></a>LPSCI_GetInstance</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, fsl_lpsci.o(i.LPSCI_GetInstance))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
+<LI>Call Chain = LPSCI_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_Init
+</UL>
+
+<P><STRONG><a name="[be]"></a>LPSCI_GetStatusFlags</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fsl_lpsci.o(i.LPSCI_GetStatusFlags))
+<BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_ReadBlocking
+</UL>
+
+<P><STRONG><a name="[ad]"></a>LPSCI_Init</STRONG> (Thumb, 384 bytes, Stack size 64 bytes, fsl_lpsci.o(i.LPSCI_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
+<LI>Call Chain = LPSCI_Init &rArr; LPSCI_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_GetInstance
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+</UL>
+
+<P><STRONG><a name="[b2]"></a>LPSCI_ReadBlocking</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, fsl_lpsci.o(i.LPSCI_ReadBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
+<LI>Call Chain = LPSCI_ReadBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_GetStatusFlags
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LPSCI_ClearStatusFlags
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
+</UL>
+
+<P><STRONG><a name="[b1]"></a>LPSCI_WriteBlocking</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, fsl_lpsci.o(i.LPSCI_WriteBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
+<LI>Call Chain = LPSCI_WriteBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
+</UL>
+
+<P><STRONG><a name="[ba]"></a>SLCD_GetDefaultConfig</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, fsl_slcd.o(i.SLCD_GetDefaultConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = SLCD_GetDefaultConfig &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+</UL>
+
+<P><STRONG><a name="[bb]"></a>SLCD_Init</STRONG> (Thumb, 448 bytes, Stack size 32 bytes, fsl_slcd.o(i.SLCD_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 112 + Unknown Stack Size
+<LI>Call Chain = SLCD_Init &rArr; SLCD_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_GetInstance
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+</UL>
+
+<P><STRONG><a name="[98]"></a>StrFormatPrintf</STRONG> (Thumb, 562 bytes, Stack size 120 bytes, fsl_str.o(i.StrFormatPrintf))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = StrFormatPrintf &rArr; ConvertRadixNumToString &rArr; __aeabi_idivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConvertRadixNumToString
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+</UL>
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+</UL>
+
+<P><STRONG><a name="[34]"></a>SystemInit</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, system_mkl46z4.o(i.SystemInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SystemInit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInitHook
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[c2]"></a>SystemInitHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, system_mkl46z4.o(i.SystemInitHook))
+<BR><BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
+</UL>
+
+<P><STRONG><a name="[3e]"></a>UART0_DriverIRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, fsl_lpsci.o(i.UART0_DriverIRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UART0_DriverIRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[3f]"></a>UART1_DriverIRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, fsl_uart.o(i.UART1_DriverIRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UART1_DriverIRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[40]"></a>UART2_DriverIRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, fsl_uart.o(i.UART2_DriverIRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UART2_DriverIRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_mkl46z4.o(.text)
+</UL>
+<P><STRONG><a name="[aa]"></a>UART_GetDefaultConfig</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, fsl_uart.o(i.UART_GetDefaultConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = UART_GetDefaultConfig &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+</UL>
+
+<P><STRONG><a name="[c3]"></a>UART_GetInstance</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, fsl_uart.o(i.UART_GetInstance))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
+<LI>Call Chain = UART_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+</UL>
+
+<P><STRONG><a name="[c4]"></a>UART_GetStatusFlags</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, fsl_uart.o(i.UART_GetStatusFlags))
+<BR><BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_ReadBlocking
+</UL>
+
+<P><STRONG><a name="[ab]"></a>UART_Init</STRONG> (Thumb, 284 bytes, Stack size 40 bytes, fsl_uart.o(i.UART_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
+<LI>Call Chain = UART_Init &rArr; UART_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_GetInstance
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Init
+</UL>
+
+<P><STRONG><a name="[b0]"></a>UART_ReadBlocking</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, fsl_uart.o(i.UART_ReadBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
+<LI>Call Chain = UART_ReadBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_GetStatusFlags
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
+</UL>
+
+<P><STRONG><a name="[af]"></a>UART_WriteBlocking</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, fsl_uart.o(i.UART_WriteBlocking))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UART_WriteBlocking
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IO_Transfer
+</UL>
+
+<P><STRONG><a name="[8b]"></a>__ARM_common_switch8</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, lcd.o(i.__ARM_common_switch8))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_common_switch8
+</UL>
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllExtRefClkFreq
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetNum
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+</UL>
+
+<P><STRONG><a name="[cd]"></a>__ARM_fpclassify</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, fpclassify.o(i.__ARM_fpclassify))
+<BR><BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+</UL>
+
+<P><STRONG><a name="[c5]"></a>__kernel_poly</STRONG> (Thumb, 172 bytes, Stack size 24 bytes, poly.o(i.__kernel_poly))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = __kernel_poly &rArr; __aeabi_dmul
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+</UL>
+
+<P><STRONG><a name="[c8]"></a>__mathlib_dbl_infnan</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_infnan))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __mathlib_dbl_infnan &rArr; __ARM_scalbn
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+</UL>
+
+<P><STRONG><a name="[ca]"></a>__mathlib_dbl_infnan2</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_infnan2))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __mathlib_dbl_infnan2 &rArr; __aeabi_dadd
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan2
+</UL>
+
+<P><STRONG><a name="[cb]"></a>__mathlib_dbl_underflow</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, dunder.o(i.__mathlib_dbl_underflow))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __mathlib_dbl_underflow &rArr; __ARM_scalbn
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
+</UL>
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+</UL>
+
+<P><STRONG><a name="[cc]"></a>atan</STRONG> (Thumb, 472 bytes, Stack size 56 bytes, atan.o(i.atan))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = atan &rArr; __kernel_poly &rArr; __aeabi_dmul
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan2
+</UL>
+
+<P><STRONG><a name="[d1]"></a>atan2</STRONG> (Thumb, 372 bytes, Stack size 40 bytes, atan2.o(i.atan2))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = atan2 &rArr; atan &rArr; __kernel_poly &rArr; __aeabi_dmul
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan2
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmpeq
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[d7]"></a>delay</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lcd.o(i.delay))
+<BR><BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[d3]"></a>init_i2c</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, main.o(i.init_i2c))
+<BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
+<LI>Call Chain = init_i2c &rArr; BOARD_InitDebugConsole &rArr; DbgConsole_Init &rArr; LOG_Init &rArr; IO_Init &rArr; LPSCI_Init &rArr; LPSCI_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterInit
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterGetDefaultConfig
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFreq
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitPins
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitDebugConsole
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_I2C_ConfigurePins
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_BootClockRUN
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[4d]"></a>main</STRONG> (Thumb, 218 bytes, Stack size 40 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 384 + Unknown Stack Size
+<LI>Call Chain = main &rArr; DbgConsole_Printf &rArr; StrFormatPrintf &rArr; ConvertRadixNumToString &rArr; __aeabi_idivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayDemical
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DbgConsole_Printf
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send_i2c
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_i2c
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_i2c
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan2
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
+</UL>
+
+<P><STRONG><a name="[d5]"></a>read_i2c</STRONG> (Thumb, 44 bytes, Stack size 48 bytes, main.o(i.read_i2c))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
+<LI>Call Chain = read_i2c &rArr; I2C_MasterTransferBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[d4]"></a>send_i2c</STRONG> (Thumb, 46 bytes, Stack size 48 bytes, main.o(i.send_i2c))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
+<LI>Call Chain = send_i2c &rArr; I2C_MasterTransferBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[d2]"></a>__aeabi_cdcmpeq</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, deqf.o(x$fpl$deqf))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __aeabi_cdcmpeq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan2
+</UL>
+
+<P><STRONG><a name="[d8]"></a>_dcmpeq</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, deqf.o(x$fpl$deqf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dcmp_InfNaN
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[b5]"></a>SLCD_SetBackPlanePhase</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lcd.o(i.SLCD_SetBackPlanePhase))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayError
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayDemical
+</UL>
+
+<P><STRONG><a name="[b8]"></a>SLCD_SetFrontPlaneSegments</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lcd.o(i.SLCD_SetFrontPlaneSegments))
+<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetNum
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayError
+</UL>
+
+<P><STRONG><a name="[b7]"></a>SLCD_StartDisplay</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lcd.o(i.SLCD_StartDisplay))
+<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayError
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayDemical
+</UL>
+
+<P><STRONG><a name="[75]"></a>CLOCK_CONFIG_SetFllExtRefDiv</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, clock_config.o(i.CLOCK_CONFIG_SetFllExtRefDiv))
+<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_BootClockRUN
+</UL>
+
+<P><STRONG><a name="[7a]"></a>CLOCK_EnableClock</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, pin_mux.o(i.CLOCK_EnableClock))
+<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitPins
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_I2C_ConfigurePins
+</UL>
+
+<P><STRONG><a name="[7b]"></a>PORT_SetPinConfig</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, pin_mux.o(i.PORT_SetPinConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
+<LI>Call Chain = PORT_SetPinConfig &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_I2C_ConfigurePins
+</UL>
+
+<P><STRONG><a name="[80]"></a>PORT_SetPinMux</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, pin_mux.o(i.PORT_SetPinMux))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = PORT_SetPinMux
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BOARD_InitPins
+</UL>
+
+<P><STRONG><a name="[89]"></a>CLOCK_GetFllExtRefClkFreq</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, fsl_clock.o(i.CLOCK_GetFllExtRefClkFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetFllExtRefClkFreq &rArr; CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetMcgExtClkFreq
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllRefClkFreq
+</UL>
+
+<P><STRONG><a name="[87]"></a>CLOCK_GetFllRefClkFreq</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetFllRefClkFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetFllRefClkFreq &rArr; CLOCK_GetFllExtRefClkFreq &rArr; CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllExtRefClkFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllFreq
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFixedFreqClkFreq
+</UL>
+
+<P><STRONG><a name="[91]"></a>CLOCK_GetInternalRefClkSelectFreq</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, fsl_clock.o(i.CLOCK_GetInternalRefClkSelectFreq))
+<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOutClkFreq
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetInternalRefClkFreq
+</UL>
+
+<P><STRONG><a name="[8a]"></a>CLOCK_GetMcgExtClkFreq</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetMcgExtClkFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetOutClkFreq
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPll0RefFreq
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetFllExtRefClkFreq
+</UL>
+
+<P><STRONG><a name="[93]"></a>CLOCK_GetOscRangeFromFreq</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, fsl_clock.o(i.CLOCK_GetOscRangeFromFreq))
+<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_InitOsc0
+</UL>
+
+<P><STRONG><a name="[92]"></a>CLOCK_GetPll0RefFreq</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, fsl_clock.o(i.CLOCK_GetPll0RefFreq))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
+<LI>Call Chain = CLOCK_GetPll0RefFreq &rArr; CLOCK_GetMcgExtClkFreq &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetMcgExtClkFreq
+</UL>
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLOCK_GetPll0Freq
+</UL>
+
+<P><STRONG><a name="[9e]"></a>CLOCK_EnableClock</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fsl_i2c.o(i.CLOCK_EnableClock))
+<BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterInit
+</UL>
+
+<P><STRONG><a name="[a7]"></a>I2C_CheckAndClearError</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, fsl_i2c.o(i.I2C_CheckAndClearError))
+<BR><BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+</UL>
+
+<P><STRONG><a name="[9f]"></a>I2C_MasterClearStatusFlags</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, fsl_i2c.o(i.I2C_MasterClearStatusFlags))
+<BR><BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterTransferBlocking
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterInit
+</UL>
+
+<P><STRONG><a name="[9a]"></a>I2C_TransferCommonIRQHandler</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, fsl_i2c.o(i.I2C_TransferCommonIRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = I2C_TransferCommonIRQHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C1_DriverIRQHandler
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C0_DriverIRQHandler
+</UL>
+
+<P><STRONG><a name="[c0]"></a>SLCD_GetInstance</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, fsl_slcd.o(i.SLCD_GetInstance))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
+<LI>Call Chain = SLCD_GetInstance &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SLCD_Init
+</UL>
+
+<P><STRONG><a name="[43]"></a>DbgConsole_RelocateLog</STRONG> (Thumb, 58 bytes, Stack size 40 bytes, fsl_debug_console.o(i.DbgConsole_RelocateLog))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184 + Unknown Stack Size
+<LI>Call Chain = DbgConsole_RelocateLog &rArr; LOG_Push &rArr; LOG_Pop &rArr; IO_Transfer &rArr; LPSCI_ReadBlocking &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display &rArr; _ttywrch
+</UL>
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LOG_Push
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> fsl_debug_console.o(i.DbgConsole_Printf)
+</UL>
+<P><STRONG><a name="[94]"></a>ConvertRadixNumToString</STRONG> (Thumb, 196 bytes, Stack size 56 bytes, fsl_str.o(i.ConvertRadixNumToString))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = ConvertRadixNumToString &rArr; __aeabi_idivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StrFormatPrintf
+</UL>
+
+<P><STRONG><a name="[65]"></a>_dadd1</STRONG> (Thumb, 290 bytes, Stack size 20 bytes, daddsub.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_drsb
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsub
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dadd
+</UL>
+
+<P><STRONG><a name="[64]"></a>_dsub1</STRONG> (Thumb, 470 bytes, Stack size 40 bytes, daddsub.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_drsb
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dsub
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dadd
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3>
+<P><STRONG><a name="[6f]"></a>_call_atexit_fns</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
+</UL>
+<HR></body></html>
