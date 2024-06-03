@@ -4,11 +4,12 @@
 #include "fsl_i2c.h"
 #include "pin_mux.h"
 #include "board.h"
-#include "lcd.h"
+#include "SLCD.h"
 #include <math.h>
 
 #define MAG3110_I2C_ADDR 0x0E
 
+void delay(uint32_t val);
 void init_i2c(void);
 void send_i2c(uint8_t device_addr, uint8_t reg_addr, uint8_t value);
 void read_i2c(uint8_t device_addr, uint8_t reg_addr, uint8_t *rxBuff, uint32_t rxSize);
@@ -26,7 +27,7 @@ int main(void)
 	PORTD->PCR[1] = PORT_PCR_MUX(1) | PORT_PCR_PE_MASK | PORT_PCR_PS_MASK;
 	PTD->PDDR &= ~(1 << 1);
 	
-	LCD_Init();
+	SLCD_Init();
 
 	PRINTF("Init MAG3110 Complete\n\r");
 
@@ -42,8 +43,15 @@ int main(void)
 
 		PRINTF("status_reg = 0x%x , x = %5d , y = %5d , z = %5d\r\n", PTD->PDIR & (1<<1), x, y, z);
 		
-		LCD_DisplayDemical(atan2(y,x) * 57.296);
+		SLCD_DisplayDemical(atan2(y,x) * 57.296);
 		delay(3000000);
+	}
+}
+
+void delay(uint32_t val){
+	while(val>0){
+		__NOP();
+		val--;
 	}
 }
 

@@ -1,6 +1,6 @@
 Dependencies for Project 'MAG3110', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARM_Compiler_5.06u7
-F (.\main.c)(0x6656B042)(--c99 --gnu -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Board_Support\MKL46Z256VLL4-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\io-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\log-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\str-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="539" -D_RTE_ -DCPU_MKL46Z256VLL4 -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x665DA4E4)(--c99 --gnu -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Board_Support\MKL46Z256VLL4-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\io-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\log-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\str-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="539" -D_RTE_ -DCPU_MKL46Z256VLL4 -D_RTE_-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x6651E664)
 I (C:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0plus.h)(0x65DFE29E)
 I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E4AD2)
@@ -21,30 +21,18 @@ I (.\RTE\Board_Support\MKL46Z256VLL4\pin_mux.h)(0x6654B409)
 I (.\RTE\Board_Support\MKL46Z256VLL4\board.h)(0x6651E664)
 I (.\RTE\Board_Support\MKL46Z256VLL4\clock_config.h)(0x6651E664)
 I (C:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers\fsl_gpio.h)(0x65DF5667)
-I (lcd.h)(0x6654B40A)
+I (SLCD.h)(0x665D9B9A)
 I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\math.h)(0x5E8E4AD2)
-F (.\lcd.c)(0x6654B40A)(--c99 --gnu -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Board_Support\MKL46Z256VLL4-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\io-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\log-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\str-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="539" -D_RTE_ -DCPU_MKL46Z256VLL4 -D_RTE_-o .\objects\lcd.o --omf_browse .\objects\lcd.crf --depend .\objects\lcd.d)
-I (lcd.h)(0x6654B40A)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E4AD2)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E4AD2)
-I (C:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers\fsl_common.h)(0x65DF5668)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\assert.h)(0x5E8E4AD2)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\string.h)(0x5E8E4AD2)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdlib.h)(0x5E8E4AD2)
-I (.\RTE\Device\MKL46Z256VLL4\fsl_device_registers.h)(0x6651E664)
+F (.\SLCD.c)(0x665DA3B1)(--c99 --gnu -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Board_Support\MKL46Z256VLL4-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\io-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\log-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\str-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="539" -D_RTE_ -DCPU_MKL46Z256VLL4 -D_RTE_-o .\objects\slcd.o --omf_browse .\objects\slcd.crf --depend .\objects\slcd.d)
 I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x6651E664)
 I (C:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0plus.h)(0x65DFE29E)
+I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E4AD2)
 I (C:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x65DFE29E)
 I (C:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x65DFE29E)
 I (.\RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x6651E664)
-I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4_features.h)(0x6651E664)
-I (C:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers\fsl_clock.h)(0x65DF5668)
-I (C:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers\fsl_slcd.h)(0x65DF5668)
-I (.\RTE\Board_Support\MKL46Z256VLL4\board.h)(0x6651E664)
-I (.\RTE\Board_Support\MKL46Z256VLL4\clock_config.h)(0x6651E664)
-I (C:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers\fsl_gpio.h)(0x65DF5667)
-I (.\RTE\Board_Support\MKL46Z256VLL4\pin_mux.h)(0x6654B409)
-F (.\lcd.h)(0x6654B40A)()
+I (SLCD.h)(0x665D9B9A)
+I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E4AD2)
+F (.\SLCD.h)(0x665D9B9A)()
 F (RTE/Board_Support/MKL46Z256VLL4/board.c)(0x6651E664)(--c99 --gnu -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Board_Support\MKL46Z256VLL4-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\io-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\log-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\str-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="539" -D_RTE_ -DCPU_MKL46Z256VLL4 -D_RTE_-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
 I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E4AD2)
 I (C:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers\fsl_common.h)(0x65DF5668)
@@ -248,22 +236,6 @@ I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4_features.h)(0x6651E664)
 I (C:/Users/Quan/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_clock.h)(0x65DF5668)
 F (C:/Users/Quan/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_lpsci.c)(0x65DF5667)(--c99 --gnu -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Board_Support\MKL46Z256VLL4-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\io-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\log-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\str-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="539" -D_RTE_ -DCPU_MKL46Z256VLL4 -D_RTE_-o .\objects\fsl_lpsci.o --omf_browse .\objects\fsl_lpsci.crf --depend .\objects\fsl_lpsci.d)
 I (C:/Users/Quan/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_lpsci.h)(0x65DF5668)
-I (C:/Users/Quan/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_common.h)(0x65DF5668)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\assert.h)(0x5E8E4AD2)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E4AD2)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E4AD2)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\string.h)(0x5E8E4AD2)
-I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdlib.h)(0x5E8E4AD2)
-I (.\RTE\Device\MKL46Z256VLL4\fsl_device_registers.h)(0x6651E664)
-I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4.h)(0x6651E664)
-I (C:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm0plus.h)(0x65DFE29E)
-I (C:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x65DFE29E)
-I (C:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x65DFE29E)
-I (.\RTE\Device\MKL46Z256VLL4\system_MKL46Z4.h)(0x6651E664)
-I (.\RTE\Device\MKL46Z256VLL4\MKL46Z4_features.h)(0x6651E664)
-I (C:/Users/Quan/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_clock.h)(0x65DF5668)
-F (C:/Users/Quan/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_slcd.c)(0x65DF5667)(--c99 --gnu -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Board_Support\MKL46Z256VLL4-I.\RTE\Device\MKL46Z256VLL4-I.\RTE\_Target_1-IC:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\io-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\log-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\str-IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3-D__UVISION_VERSION="539" -D_RTE_ -DCPU_MKL46Z256VLL4 -D_RTE_-o .\objects\fsl_slcd.o --omf_browse .\objects\fsl_slcd.crf --depend .\objects\fsl_slcd.d)
-I (C:/Users/Quan/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_slcd.h)(0x65DF5668)
 I (C:/Users/Quan/AppData/Local/Arm/Packs/NXP/MKL46Z4_DFP/10.0.3/drivers/fsl_common.h)(0x65DF5668)
 I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\assert.h)(0x5E8E4AD2)
 I (C:\Keil_v5\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E4AD2)

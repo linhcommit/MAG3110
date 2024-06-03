@@ -22,19 +22,16 @@ Dialog DLL:      TARMCM1.DLL V1.14.6.0
  
 <h2>Project:</h2>
 C:\Users\Quan\Disk\Fork Git\MAG3110\MAG3110.uvprojx
-Project File Date:  05/26/2024
+Project File Date:  06/03/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin'
 Build target 'Target 1'
-compiling pin_mux.c...
-compiling main.c...
-compiling lcd.c...
 linking...
 .\Objects\MAG3110.axf: Warning: L6914W: option ro-base ignored when using --scatter.
 .\Objects\MAG3110.axf: Warning: L6914W: option rw-base ignored when using --scatter.
 .\Objects\MAG3110.axf: Warning: L6340W: options first and last are ignored for link type of scattered
-Program Size: Code=14388 RO-data=1644 RW-data=56 ZI-data=2156  
+Program Size: Code=13684 RO-data=1548 RW-data=56 ZI-data=2156  
 Finished: 0 information, 3 warning and 0 error messages.
 ".\Objects\MAG3110.axf" - 0 Error(s), 3 Warning(s).
 
@@ -58,7 +55,6 @@ Package Vendor: NXP
    * Component: i2c Version: 2.0.5
    * Component: lpsci Version: 2.0.4
    * Component: port Version: 2.0.2
-   * Component: slcd Version: 2.0.1
    * Component: smc Version: 2.0.3
    * Component: uart Version: 2.1.5
    * Component: debug_console Version: 1.0.0
@@ -81,82 +77,78 @@ Package Vendor: NXP
 
    * Component: NXP::Board Support:SDK Project Template:project_template&MKL46Z4@1.0.0
       Include file:  project_template/clock_config.h
-      Source file:   project_template/pin_mux.c
-      Include file:  project_template/board.h
-      Source file:   project_template/clock_config.c
-      Source file:   project_template/peripherals.c
-      Source file:   project_template/board.c
-      Include file:  project_template/pin_mux.h
       Include file:  project_template/peripherals.h
+      Source file:   project_template/pin_mux.c
+      Source file:   project_template/clock_config.c
+      Include file:  project_template/pin_mux.h
+      Source file:   project_template/board.c
+      Include file:  project_template/board.h
+      Source file:   project_template/peripherals.c
 
    * Component: NXP::Device:SDK Drivers:clock@2.1.0
       Include file:  drivers/fsl_clock.h
       Source file:   drivers/fsl_clock.c
 
    * Component: NXP::Device:SDK Drivers:common@2.0.0
-      Include file:  drivers/fsl_common.h
       Source file:   drivers/fsl_common.c
+      Include file:  drivers/fsl_common.h
 
    * Component: NXP::Device:SDK Drivers:flash@3.0.0
       Include file:  drivers/fsl_ftfx_utilities.h
-      Source file:   drivers/fsl_ftfx_cache.c
-      Source file:   drivers/fsl_ftfx_controller.c
-      Include file:  drivers/fsl_ftfx_flash.h
       Include file:  drivers/fsl_flash.h
       Include file:  drivers/fsl_ftfx_cache.h
+      Include file:  drivers/fsl_ftfx_flash.h
       Include file:  drivers/fsl_ftfx_controller.h
       Include file:  drivers/fsl_ftfx_features.h
-      Source file:   drivers/fsl_ftfx_flash.c
       Include file:  drivers/fsl_ftfx_adapter.h
-      Include file:  drivers/fsl_ftfx_flexnvm.h
+      Source file:   drivers/fsl_ftfx_controller.c
+      Source file:   drivers/fsl_ftfx_cache.c
       Source file:   drivers/fsl_ftfx_flexnvm.c
+      Include file:  drivers/fsl_ftfx_flexnvm.h
+      Source file:   drivers/fsl_ftfx_flash.c
 
    * Component: NXP::Device:SDK Drivers:gpio@2.2.1
       Include file:  drivers/fsl_gpio.h
       Source file:   drivers/fsl_gpio.c
 
    * Component: NXP::Device:SDK Drivers:i2c@2.0.5
-      Include file:  drivers/fsl_i2c.h
       Source file:   drivers/fsl_i2c.c
+      Include file:  drivers/fsl_i2c.h
 
    * Component: NXP::Device:SDK Drivers:lpsci@2.0.4
-      Source file:   drivers/fsl_lpsci.c
       Include file:  drivers/fsl_lpsci.h
+      Source file:   drivers/fsl_lpsci.c
 
    * Component: NXP::Device:SDK Drivers:port@2.0.2
       Include file:  drivers/fsl_port.h
 
-   * Component: NXP::Device:SDK Drivers:slcd@2.0.1
-      Include file:  drivers/fsl_slcd.h
-      Source file:   drivers/fsl_slcd.c
-
    * Component: NXP::Device:SDK Drivers:smc@2.0.3
-      Include file:  drivers/fsl_smc.h
       Source file:   drivers/fsl_smc.c
+      Include file:  drivers/fsl_smc.h
 
    * Component: NXP::Device:SDK Drivers:uart@2.1.5
-      Include file:  drivers/fsl_uart.h
       Source file:   drivers/fsl_uart.c
+      Include file:  drivers/fsl_uart.h
 
    * Component: NXP::Device:SDK Utilities:debug_console@1.0.0
       Source file:   utilities/io/fsl_io.c
       Source file:   utilities/fsl_debug_console.c
-      Include file:  utilities/fsl_debug_console_conf.h
-      Include file:  utilities/log/fsl_log.h
-      Include file:  utilities/fsl_debug_console.h
-      Source file:   utilities/log/fsl_log.c
-      Source file:   utilities/str/fsl_str.c
       Include file:  utilities/io/fsl_io.h
+      Source file:   utilities/log/fsl_log.c
+      Include file:  utilities/log/fsl_log.h
       Include file:  utilities/str/fsl_str.h
+      Include file:  utilities/fsl_debug_console_conf.h
+      Source file:   utilities/str/fsl_str.c
+      Include file:  utilities/fsl_debug_console.h
 
    * Component: NXP::Device:Startup@1.0.0
+      Source file:   arm/startup_MKL46Z4.s
       Include file:  MKL46Z4_features.h
       Include file:  fsl_device_registers.h
       Include file:  MKL46Z4.h
-      Source file:   arm/startup_MKL46Z4.s
-      Include file:  system_MKL46Z4.h
       Source file:   system_MKL46Z4.c
-Build Time Elapsed:  00:00:01
+      Include file:  system_MKL46Z4.h
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

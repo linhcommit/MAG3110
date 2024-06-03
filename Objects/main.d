@@ -20,5 +20,5 @@
 .\objects\main.o: .\RTE\Board_Support\MKL46Z256VLL4\board.h
 .\objects\main.o: .\RTE\Board_Support\MKL46Z256VLL4\clock_config.h
 .\objects\main.o: C:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers\fsl_gpio.h
-.\objects\main.o: lcd.h
+.\objects\main.o: SLCD.h
 .\objects\main.o: C:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\math.h
