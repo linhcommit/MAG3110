@@ -1,3 +1,7 @@
+/////////////////////////////////////////////////////
+////Tac gia/Author: Tran Hong Quan, Dao Tuan Linh////
+/////////////////////////////////////////////////////
+
 #include "MKL46Z4.h"
 #include "SLCD.h"
 #include <math.h>
@@ -11,36 +15,50 @@ void init_Led(void);
 void PORTC_PORTD_IRQHandler(void);
 void init_switch(void);
 void init_SysTick_interrupt(void);
+void init_NVIC(void);
+
+static bool isOn;
 
 int main(){
+
 	init_Led();
 	init_switch();
 	init_SysTick_interrupt();
 	SLCD_Init();
-	NVIC_ClearPendingIRQ(PORTC_PORTD_IRQn);					//Clear all interrupt in PORTC and PORTD
-	NVIC_ClearPendingIRQ(SysTick_IRQn);							//Clear all interrupt in SysTick
-	NVIC_EnableIRQ(PORTC_PORTD_IRQn);								//Enable interrupt in PORTC PORTD
-	NVIC_EnableIRQ(SysTick_IRQn);										//Enable interrupt in Systick
-	NVIC_SetPriority(PORTC_PORTD_IRQn,10);
-	NVIC_SetPriority(SysTick_IRQn,11);
+	init_NVIC();
+	isOn = true;
 	
 	int num = 0;
 	while(1){
+		if(!isOn) continue;
+		
+		//Linh them code o day
 		if(num > 9999) num = 0;
 		SLCD_DisplayDemical(num++);
 		for(int i = 0; i< 1000; i++){}
 	}
 }
 
+void init_NVIC(){
+	NVIC_ClearPendingIRQ(PORTC_PORTD_IRQn);					//Clear all interrupt in PORTC and PORTD
+	NVIC_ClearPendingIRQ(SysTick_IRQn);							//Clear all interrupt in SysTick
+	NVIC_EnableIRQ(PORTC_PORTD_IRQn);								//Enable interrupt in PORTC PORTD
+	NVIC_EnableIRQ(SysTick_IRQn);										//Enable interrupt in Systick
+	NVIC_SetPriority(PORTC_PORTD_IRQn,10);
+	NVIC_SetPriority(SysTick_IRQn,11);
+}
+
 void init_Led(void){
 
-	SIM->SCGC5 |= SIM_SCGC5_PORTE(1);						//Enable Port E
-	PORTE->PCR[LED_RED_PIN] = PORT_PCR_MUX(1);	//MUX 1, GPIO
-	PTE->PDDR = 1<<LED_RED_PIN;									//Set red led as output
+	SIM->SCGC5 |= SIM_SCGC5_PORTE(1);							//Enable Port E
+	PORTE->PCR[LED_RED_PIN] |= PORT_PCR_MUX(1);		//MUX 1, GPIO
+	PTE->PDDR |= 1<<LED_RED_PIN;									//Set red led as output
+	PTE->PSOR |= 1<<LED_RED_PIN;									//Clear red led
 	
-	SIM->SCGC5 = SIM_SCGC5_PORTD(1);						//Enable Port D
-	PORTD->PCR[LED_GREEN_PIN] = PORT_PCR_MUX(1);//MUX 1, GPIO
-	PTD->PDDR = 1<<LED_GREEN_PIN;								//Set green led as output
+	SIM->SCGC5 = SIM_SCGC5_PORTD(1);							//Enable Port D
+	PORTD->PCR[LED_GREEN_PIN] |= PORT_PCR_MUX(1);	//MUX 1, GPIO
+	PTD->PDDR |= 1<<LED_GREEN_PIN;								//Set green led as output
+	PTD->PSOR |= 1<<LED_GREEN_PIN;								//Clear green led
 }
 
 void init_switch(){
@@ -61,7 +79,17 @@ void PORTC_PORTD_IRQHandler(void)
 {
 	if((PTC->PDIR & (1<<SWITCH_1_PIN)) == 0)							//Check click SWITCH 1 in Port Data Input Register
 	{
-		PTD->PTOR |= 1<<LED_GREEN_PIN;
+		isOn = !isOn;
+		if(isOn)
+		{
+			SLCD_OnDisplay();
+		}
+		else
+		{
+			SLCD_OffDisplay();
+			PTE->PSOR |= 1<<LED_RED_PIN;					
+			PTD->PSOR |= 1<<LED_GREEN_PIN;			
+		}
 		PORTC->PCR[SWITCH_1_PIN] |= PORT_PCR_ISF_MASK;			//Clear interrupt flag
 	}
 	if((PTC->PDIR & (1<<SWTICH_2_PIN)) == 0)							//Check click SWITCH 2 in Port Data Input Register
@@ -90,6 +118,8 @@ void init_SysTick_interrupt(void){
 
 static bool isGreen;
 void SysTick_Handler(void){
+	if(!isOn) return;
+	
 	PTE->PTOR |= 1<<LED_RED_PIN;
 	
 	if(isGreen)

@@ -84,7 +84,7 @@ void SLCD_OffDisplay(){
 }
 
 void SLCD_OnDisplay(){
-	LCD->AR = LCD_AR_BLANK(1); //Normal or alternate display mode
+	LCD->AR = LCD_AR_BLANK(0); //Normal or alternate display mode
 }
 
 void SLCD_SetNum(uint8_t dig, uint8_t num, bool isShowZero){
