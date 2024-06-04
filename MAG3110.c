@@ -1,5 +1,6 @@
 #include "MAG3110.h"
 #include "I2C.h" 
+#include "math.h"
 #define MAG3110_ADDR					(0x0E << 1)
 #define I2C_WRITE							0
 #define I2C_READ							1
@@ -85,6 +86,17 @@ int16_t MAG3110_z(void){
 	return MAG3110_Read_Reg16(0x05);
 }
 
+// Find ANGLE
+
+uint16_t MAG3110_ReadAngle(void){
+		int16_t x = MAG3110_x() - 213;
+		int16_t y = MAG3110_y() + 251;
+		
+		double heading = atan2((double)y,(double)x)*57.2957;
+	
+		if(heading < 0) heading += 360;
+		return (uint16_t)heading;
+}
 
 
 

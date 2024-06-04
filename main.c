@@ -1,91 +1,134 @@
+/////////////////////////////////////////////////////
+////Tac gia/Author: Tran Hong Quan, Dao Tuan Linh////
+/////////////////////////////////////////////////////
+
 #include "MKL46Z4.h"
-#include <stdbool.h>
-#include "fsl_debug_console.h"
-#include "fsl_i2c.h"
-#include "pin_mux.h"
-#include "board.h"
-#include "lcd.h"
+#include "SLCD.h"
+#include "I2C.h"
+#include "MAG3110.h"
 #include <math.h>
 
-#define MAG3110_I2C_ADDR 0x0E
+#define LED_GREEN_PIN 5
+#define LED_RED_PIN 29
+#define SWITCH_1_PIN 3
+#define SWTICH_2_PIN 12
 
-void init_i2c(void);
-void send_i2c(uint8_t device_addr, uint8_t reg_addr, uint8_t value);
-void read_i2c(uint8_t device_addr, uint8_t reg_addr, uint8_t *rxBuff, uint32_t rxSize);
-
-volatile bool isReadyToGetData;
+void init_Led(void);
 void PORTC_PORTD_IRQHandler(void);
+void init_switch(void);
+void init_SysTick_interrupt(void);
+void init_NVIC(void);
 
-int main(void)
-{
-	init_i2c();
-	send_i2c(MAG3110_I2C_ADDR, 0x10, 0x01);
-	send_i2c(MAG3110_I2C_ADDR, 0x11, 0x80);
+static bool isOn;
 
-	SIM->SCGC5 |= SIM_SCGC5_PORTD_MASK;
-	PORTD->PCR[1] = PORT_PCR_MUX(1) | PORT_PCR_PE_MASK | PORT_PCR_PS_MASK;
-	PTD->PDDR &= ~(1 << 1);
+int main(){
+
+	init_Led();
+	init_switch();
+	init_SysTick_interrupt();
+	SLCD_Init();
+	init_NVIC();
+	i2c_init(I2C0);
+	MAG3110_Init();
+	isOn = true;
 	
-	LCD_Init();
-
-	PRINTF("Init MAG3110 Complete\n\r");
-
-	uint8_t rxBuff[6];
-	while (1)
-	{
-		//if((PTD->PDIR & (1<<1)) != 0) continue;
+	while(1){
+		if(!isOn) continue;
 		
-		read_i2c(MAG3110_I2C_ADDR, 1, rxBuff, 6);
-		uint16_t x = (int16_t)(((rxBuff[0] * 256U) | rxBuff[1]));
-		uint16_t y = (int16_t)(((rxBuff[2] * 256U) | rxBuff[3]));
-		uint16_t z = (int16_t)(((rxBuff[4] * 256U) | rxBuff[5]));
-
-		PRINTF("status_reg = 0x%x , x = %5d , y = %5d , z = %5d\r\n", PTD->PDIR & (1<<1), x, y, z);
+		//Linh them code o day
+		uint16_t angle = MAG3110_ReadAngle();
+		SLCD_DisplayDemical(angle);
 		
-		LCD_DisplayDemical(atan2(y,x) * 57.296);
-		delay(3000000);
+		for(uint32_t i = 0; i < 1000000; i++){}
 	}
 }
 
-void init_i2c()
-{
-	i2c_master_config_t masterConfig;
-	BOARD_InitPins();
-	BOARD_BootClockRUN();
-	BOARD_InitDebugConsole();
-	BOARD_I2C_ConfigurePins();
-
-	I2C_MasterGetDefaultConfig(&masterConfig);
-	masterConfig.baudRate_Bps = 100000U;
-	I2C_MasterInit(I2C0, &masterConfig, CLOCK_GetFreq(I2C0_CLK_SRC));
+void init_NVIC(){
+	NVIC_ClearPendingIRQ(PORTC_PORTD_IRQn);					//Clear all interrupt in PORTC and PORTD
+	NVIC_ClearPendingIRQ(SysTick_IRQn);							//Clear all interrupt in SysTick
+	NVIC_EnableIRQ(PORTC_PORTD_IRQn);								//Enable interrupt in PORTC PORTD
+	NVIC_EnableIRQ(SysTick_IRQn);										//Enable interrupt in Systick
+	NVIC_SetPriority(PORTC_PORTD_IRQn,10);
+	NVIC_SetPriority(SysTick_IRQn,11);
 }
 
-void send_i2c(uint8_t device_addr, uint8_t reg_addr, uint8_t value)
-{
-	i2c_master_transfer_t masterXfer;
+void init_Led(void){
 
-	masterXfer.slaveAddress = device_addr;
-	masterXfer.direction = kI2C_Write;
-	masterXfer.subaddress = (uint32_t)reg_addr;
-	masterXfer.subaddressSize = 1;
-	masterXfer.data = &value;
-	masterXfer.dataSize = 1;
-	masterXfer.flags = kI2C_TransferDefaultFlag;
-
-	I2C_MasterTransferBlocking(I2C0, &masterXfer);
+	SIM->SCGC5 |= SIM_SCGC5_PORTE(1);							//Enable Port E
+	PORTE->PCR[LED_RED_PIN] |= PORT_PCR_MUX(1);		//MUX 1, GPIO
+	PTE->PDDR |= 1<<LED_RED_PIN;									//Set red led as output
+	PTE->PSOR |= 1<<LED_RED_PIN;									//Clear red led
+	
+	SIM->SCGC5 = SIM_SCGC5_PORTD(1);							//Enable Port D
+	PORTD->PCR[LED_GREEN_PIN] |= PORT_PCR_MUX(1);	//MUX 1, GPIO
+	PTD->PDDR |= 1<<LED_GREEN_PIN;								//Set green led as output
+	PTD->PSOR |= 1<<LED_GREEN_PIN;								//Clear green led
 }
 
-void read_i2c(uint8_t device_addr, uint8_t reg_addr, uint8_t *rxBuff, uint32_t rxSize)
-{
-	i2c_master_transfer_t masterXfer;
-
-	masterXfer.slaveAddress = device_addr;
-	masterXfer.direction = kI2C_Read;
-	masterXfer.subaddress = (uint32_t)reg_addr;
-	masterXfer.subaddressSize = 1;
-	masterXfer.data = rxBuff;
-	masterXfer.dataSize = rxSize;
-	masterXfer.flags = kI2C_TransferDefaultFlag;
-
-	I2C_MasterTransferBlocking(I2C0, &masterXfer);
+void init_switch(){
+	SIM->SCGC5 |= SIM_SCGC5_PORTC(1);											//Enable Port C
+	PORTC->PCR[SWITCH_1_PIN] = PORT_PCR_MUX(1) 						//SWITCH 1 GIPIO
+		| PORT_PCR_PE_MASK 																	//SWITCH 1 Pull enable	
+		| PORT_PCR_PS_MASK;																	//SWITCH 1 Pull up
+	PORTC->PCR[SWTICH_2_PIN] = PORT_PCR_MUX(1) 						//SWITCH 2 GIPIO
+		| PORT_PCR_PE_MASK 																	//SWITCH 2 Pull enable
+		| PORT_PCR_PS_MASK;																	//SWITCH 2 Pull up
+	PTC->PDDR &= ~(1<<SWITCH_1_PIN);											//SWITCH 1 as input
+	PTC->PDDR &= ~(1<<SWTICH_2_PIN);											//SWITCH 2 as input
+	PORTC->PCR[SWITCH_1_PIN] |= PORT_PCR_IRQC(0B1010U);		//SWITCH 1 Interrupt on falling edge.
+	PORTC->PCR[SWTICH_2_PIN] |= PORT_PCR_IRQC(0B1010U);		//SWITCH 2 Interrupt on falling edge.
 }
+
+void PORTC_PORTD_IRQHandler(void)
+{
+	if((PTC->PDIR & (1<<SWITCH_1_PIN)) == 0)							//Check click SWITCH 1 in Port Data Input Register
+	{
+		isOn = !isOn;
+		if(isOn)
+		{
+			SLCD_OnDisplay();
+		}
+		else
+		{
+			SLCD_OffDisplay();
+			PTE->PSOR |= 1<<LED_RED_PIN;					
+			PTD->PSOR |= 1<<LED_GREEN_PIN;			
+		}
+		PORTC->PCR[SWITCH_1_PIN] |= PORT_PCR_ISF_MASK;			//Clear interrupt flag
+	}
+	if((PTC->PDIR & (1<<SWTICH_2_PIN)) == 0)							//Check click SWITCH 2 in Port Data Input Register
+	{
+		PORTC->PCR[SWTICH_2_PIN] |= PORT_PCR_ISF_MASK;			//Clear interrupt flag
+		PTD->PTOR |= 1<<LED_GREEN_PIN;
+		NVIC_SystemReset();
+	}
+}
+
+void init_SysTick_interrupt(void){
+	// Line 115 in file system_MKL46Z4.c 
+	// uint32_t SystemCoreClock = DEFAULT_SYSTEM_CLOCK;
+	// Line 137 system_MKL46Z4.h
+  // #define DEFAULT_SYSTEM_CLOCK           20 971 520 U  
+	
+	SysTick->CTRL |= (1<<0); // Enables the counter
+	//Enables Systick exception request
+	SysTick->CTRL |= (1<<1); 
+	// Choose the clock source is processor clock
+	SysTick->CTRL |= (1<<2);
+	
+	SysTick->LOAD = SystemCoreClock * 250 - 1;
+	SysTick->VAL = 0;
+}
+
+static bool isGreen;
+void SysTick_Handler(void){
+	if(!isOn) return;
+	
+	PTE->PTOR |= 1<<LED_RED_PIN;
+	
+	if(isGreen)
+		PTD->PTOR |= 1<<LED_GREEN_PIN;
+	isGreen = !isGreen;
+}
+
+

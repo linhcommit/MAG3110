@@ -36,19 +36,19 @@ float caliby() {
 	}
 	return (miny + maxy) / 2.0;
 }
-
+/*
 int main(void){
 	i2c_init(I2C0);
-	UART_Init();
 	MAG3110_Init();
 	
-	x_calib = calibx();
-	y_calib = caliby();
+	//x_calib = calibx();
+	//y_calib = caliby();
+	
 	
 	while(1){
-		x = MAG3110_x() - x_calib;
+		x = MAG3110_x() - 213;
 		DELAY();
-		y = MAG3110_y() - y_calib;
+		y = MAG3110_y() + 251;
 		DELAY();
 		// degree
 		
@@ -60,5 +60,15 @@ int main(void){
 		
 		for(i = 0; i < 300000; i++){}
 	}
+}
+*/
+uint16_t angle(){
+		int16_t x = MAG3110_x() - 213;
+		int16_t y = MAG3110_y() + 251;
+		
+		double heading = atan2((double)y,(double)x)*57.2957;
+	
+		if(heading < 0) heading += 360;
+		return (uint16_t)heading;
 }
 

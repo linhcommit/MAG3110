@@ -18,4 +18,7 @@ int16_t MAG3110_y(void);
 // z Axis
 int16_t MAG3110_z(void);
 
+// Read Angle
+uint16_t MAG3110_ReadAngle(void);
+
 #endif 
