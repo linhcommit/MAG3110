@@ -1,11 +1,12 @@
 #include "MAG3110.h"
-#include "i2c.h"
+#include "I2C.h" 
+#include "math.h"
 #define MAG3110_ADDR					(0x0E << 1)
 #define I2C_WRITE							0
 #define I2C_READ							1
 
 void MAG3110_Write(uint8_t addr, uint8_t data){
-	delay();
+	DELAY();
 	START(I2C0);
 	
 	// i2c_write(I2C0, MAG3110_I2C_ADDR<<1);
@@ -20,7 +21,7 @@ void MAG3110_Write(uint8_t addr, uint8_t data){
 // is fixing
 uint8_t MAG3110_Read(uint8_t addr){
 	// Ngan cach truyen nhan I2C giua cac lan
-	delay();
+	DELAY();
 	// bit ST
 	START(I2C0);
 	// 6 bit Device Address and 1 bit Write + ACK
@@ -55,14 +56,11 @@ uint8_t MAG3110_Read(uint8_t addr){
 }
 
 void MAG3110_Init(void) {
-  // CTRL_REG1 has address is 0x10;
-	// Only need turn bit ActiveMode in CTRL_REG1
-  MAG3110_Write(0x10, 0x01);
-  delay();  // Ensure delay() is properly defined
-	delay();
-  // CTRL_REG2 has address is 0x11;
-  MAG3110_Write(0x11, 0x80);
+        // CTRL_REG1 has address is 0x10;
+				// Only need turn bit ActiveMode in CTRL_REG1
+        MAG3110_Write(0x10, 0x01);
 }
+
 
 // Collect data from sensor
 int16_t MAG3110_Read_Reg16(uint8_t reg){
@@ -88,6 +86,17 @@ int16_t MAG3110_z(void){
 	return MAG3110_Read_Reg16(0x05);
 }
 
+// Find ANGLE
+
+uint16_t MAG3110_ReadAngle(void){
+		int16_t x = MAG3110_x() - 213;
+		int16_t y = MAG3110_y() + 251;
+		
+		double heading = atan2((double)y,(double)x)*57.2957;
+	
+		if(heading < 0) heading += 360;
+		return (uint16_t)heading;
+}
 
 
 

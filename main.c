@@ -4,6 +4,8 @@
 
 #include "MKL46Z4.h"
 #include "SLCD.h"
+#include "I2C.h"
+#include "MAG3110.h"
 #include <math.h>
 
 #define LED_GREEN_PIN 5
@@ -26,16 +28,18 @@ int main(){
 	init_SysTick_interrupt();
 	SLCD_Init();
 	init_NVIC();
+	i2c_init(I2C0);
+	MAG3110_Init();
 	isOn = true;
 	
-	int num = 0;
 	while(1){
 		if(!isOn) continue;
 		
 		//Linh them code o day
-		if(num > 9999) num = 0;
-		SLCD_DisplayDemical(num++);
-		for(int i = 0; i< 1000; i++){}
+		uint16_t angle = MAG3110_ReadAngle();
+		SLCD_DisplayDemical(angle);
+		
+		for(uint32_t i = 0; i < 1000000; i++){}
 	}
 }
 

@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 #include "MKL46Z4.h"                 // CMSIS Driver:I2C:Custom
+volatile int32_t msTicks = 0;
 
 void i2c_set_master(I2C_Type *p){
 	// Page 716 Bit 5 (MST - Master Mode Select): When the 
@@ -118,9 +119,14 @@ void WAIT_ACK(I2C_Type *p){
 	p->S |= I2C_S_IICIF_MASK;
 }
 
-void delay(void){
-	for(uint16_t i = 0; i < 100; i++){ }
+void DELAY(void) {
+    uint32_t i = 0;
+    for(i = 0; i < 3000; i++) {
+        //__asm("nop"); // Assembly no-operation instruction
+    }
 }
+
+
 
 
 
