@@ -10,7 +10,7 @@ void i2c_set_master(I2C_Type *p){
 	// generated on the bus and master mode is selected.
 	// p->C1 |= (0<<5);
 	// p->C1 |= (1<<5);
-	p->C1 |= I2C_C1_MST(0);
+	// p->C1 |= I2C_C1_MST(0);
 	p->C1 |= I2C_C1_MST_MASK;
 }
 
@@ -59,8 +59,8 @@ void i2c_init(I2C_Type *p){
 	// Find page 173: PTE25 -----> I2C0_SDA(ALT5)
 	PORTE->PCR[25] |= PORT_PCR_MUX(5);
 	
-	// 38.3.2/715 
-	// p->F = 0x14;
+	// 38.3.2/715 Set Baund Rate
+	p->F = 0x14;
 	// 38.3.3/716 I2C Control Register 1 (I2Cx_C1)
 	// p->C1 = (1u<<7);
 	p->C1 = I2C_C1_IICEN_MASK;
@@ -112,8 +112,14 @@ void STOP(I2C_Type *p){
 	i2c_set_rx(p);
 }
 
+void WAIT_ACK(I2C_Type *p){
+	while((p->S & I2C_S_IICIF_MASK) == 0);
+	// certainly turn on flag interrupt
+	p->S |= I2C_S_IICIF_MASK;
+}
+
 void delay(void){
-	for(uint16_t i = 0; i < 1000; i++){ }
+	for(uint16_t i = 0; i < 100; i++){ }
 }
 
 

@@ -24,6 +24,7 @@ void i2c_repeated_start(I2C_Type *p);
 // START ----- STOP
 void START(I2C_Type *p);
 void STOP(I2C_Type *p);
+void WAIT_ACK(I2C_Type *p);
 
 // DELAY
 void delay(void);
