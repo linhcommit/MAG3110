@@ -61,7 +61,7 @@ void i2c_init(I2C_Type *p){
 	PORTE->PCR[25] |= PORT_PCR_MUX(5);
 	
 	// 38.3.2/715 Set Baund Rate
-	p->F = 0x14;
+	// p->F = 0x14;
 	// 38.3.3/716 I2C Control Register 1 (I2Cx_C1)
 	// p->C1 = (1u<<7);
 	p->C1 = I2C_C1_IICEN_MASK;
@@ -98,19 +98,24 @@ void i2c_give_nack(I2C_Type * p){
 	p->C1 |= I2C_C1_TXAK_MASK;
 }
 
+// Give ACK
+void i2c_give_ack(I2C_Type * p){
+	p->C1 &= ~I2C_C1_TXAK_MASK;
+}
+
 void i2c_repeated_start(I2C_Type *p){
 	// bit 2 RSTA in page 717
 	p->C1 |= (1u<<2);
 }
 
 void START(I2C_Type *p){
-	i2c_set_master(p);
 	i2c_set_tx(p);
+	i2c_set_master(p);
 }
 
 void STOP(I2C_Type *p){
-	i2c_set_slave(p);
 	i2c_set_rx(p);
+	i2c_set_slave(p);
 }
 
 void WAIT_ACK(I2C_Type *p){
@@ -122,7 +127,6 @@ void WAIT_ACK(I2C_Type *p){
 void DELAY(void) {
     uint32_t i = 0;
     for(i = 0; i < 3000; i++) {
-        //__asm("nop"); // Assembly no-operation instruction
     }
 }
 

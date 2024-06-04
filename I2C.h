@@ -18,7 +18,8 @@ uint8_t i2c_read(I2C_Type *p);
 int i2c_write(I2C_Type *p, uint8_t data);
 
 // Bit State 
-void i2c_give_nack(I2C_Type *p); // Slave 
+void i2c_give_nack(I2C_Type *p); 
+void i2c_give_ack(I2C_Type * p);
 void i2c_repeated_start(I2C_Type *p);
 
 // START ----- STOP
