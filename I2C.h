@@ -26,7 +26,6 @@ void START(I2C_Type *p);
 void STOP(I2C_Type *p);
 void WAIT_ACK(I2C_Type *p);
 
-// DELAY
-void delay(void);
+void DELAY(void);
 
 #endif
