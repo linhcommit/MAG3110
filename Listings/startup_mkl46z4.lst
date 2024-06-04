@@ -701,17 +701,12 @@ ARM Macro Assembler    Page 11
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=.\objects\startup_mkl46z4.d -o.\objects\startup_mkl46z4.o -I.\RTE
-\Board_Support\MKL46Z256VLL4 -I.\RTE\Device\MKL46Z256VLL4 -I.\RTE\_Target_1 -IC
-:\Users\Quan\AppData\Local\Arm\Packs\ARM\CMSIS\5.0.1\CMSIS\Include -IC:\Users\Q
-uan\AppData\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\drivers -IC:\Users\Quan\AppD
-ata\Local\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities -IC:\Users\Quan\AppData\Lo
-cal\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\io -IC:\Users\Quan\AppData\Local
-\Arm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\log -IC:\Users\Quan\AppData\Local\A
-rm\Packs\NXP\MKL46Z4_DFP\10.0.3\utilities\str -IC:\Users\Quan\AppData\Local\Arm
-\Packs\NXP\MKL46Z4_DFP\10.0.3 --predefine="__EVAL SETA 1" --predefine="__UVISIO
-N_VERSION SETA 539" --predefine="_RTE_ SETA 1" --predefine="CPU_MKL46Z256VLL4 S
-ETA 1" --predefine="_RTE_ SETA 1" --list=.\listings\startup_mkl46z4.lst RTE/Dev
-ice/MKL46Z256VLL4/startup_MKL46Z4.s
+\Device\MKL46Z256VLL4 -I.\RTE\_Target_1 -IC:\Users\Quan\AppData\Local\Arm\Packs
+\ARM\CMSIS\5.0.1\CMSIS\Include -IC:\Users\Quan\AppData\Local\Arm\Packs\NXP\MKL4
+6Z4_DFP\10.0.3 --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 
+539" --predefine="_RTE_ SETA 1" --predefine="CPU_MKL46Z256VLL4 SETA 1" --predef
+ine="_RTE_ SETA 1" --list=.\listings\startup_mkl46z4.lst RTE/Device/MKL46Z256VL
+L4/startup_MKL46Z4.s
 
 
 

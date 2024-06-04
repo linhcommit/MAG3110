@@ -55,20 +55,13 @@ uint8_t MAG3110_Read(uint8_t addr){
 }
 
 void MAG3110_Init(void) {
-    uint8_t id;
-    id = MAG3110_Read(0x07);
-    
-    if(id != (0x0E << 1)) {  // Corrected the comparison
-        return;
-    } else {
-        // CTRL_REG1 has address is 0x10;
-				// Only need turn bit ActiveMode in CTRL_REG1
-        MAG3110_Write(0x10, 0x79);
-        delay();  // Ensure delay() is properly defined
-				delay();
-        // CTRL_REG2 has address is 0x11;
-        MAG3110_Write(0x11, 0x80);
-    }
+  // CTRL_REG1 has address is 0x10;
+	// Only need turn bit ActiveMode in CTRL_REG1
+  MAG3110_Write(0x10, 0x01);
+  delay();  // Ensure delay() is properly defined
+	delay();
+  // CTRL_REG2 has address is 0x11;
+  MAG3110_Write(0x11, 0x80);
 }
 
 // Collect data from sensor
