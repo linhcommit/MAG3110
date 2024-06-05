@@ -116,7 +116,7 @@ void init_SysTick_interrupt(void){
 	// Choose the clock source is processor clock
 	SysTick->CTRL |= (1<<2);
 	
-	SysTick->LOAD = SystemCoreClock * 250 - 1;
+	SysTick->LOAD = SystemCoreClock / 2 - 1;
 	SysTick->VAL = 0;
 }
 
