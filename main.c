@@ -1,6 +1,6 @@
-/////////////////////////////////////////////////////
-////Tac gia/Author: Tran Hong Quan, Dao Tuan Linh////
-/////////////////////////////////////////////////////
+///////////////////////////////////////////////////
+//Tac gia/Author: Tran Hong Quan, Dao Tuan Linh////
+///////////////////////////////////////////////////
 
 #include "MKL46Z4.h"
 #include "SLCD.h"
@@ -20,6 +20,8 @@ void init_SysTick_interrupt(void);
 void init_NVIC(void);
 
 static bool isOn;
+float x_calib;
+float y_calib;
 
 int main(){
 
@@ -32,12 +34,14 @@ int main(){
 	MAG3110_Init();
 	isOn = true;
 	
+	x_calib = calibx();
+	y_calib = caliby();
+	
 	while(1){
 		if(!isOn) continue;
 		
-		//Linh them code o day
-		uint16_t angle = MAG3110_ReadAngle();
-		SLCD_DisplayDemical(angle);
+		float angle = MAG3110_ReadAngle();
+		SLCD_DisplayDemical((uint16_t)angle);
 		
 		for(uint32_t i = 0; i < 1000000; i++){}
 	}
@@ -57,12 +61,12 @@ void init_Led(void){
 	SIM->SCGC5 |= SIM_SCGC5_PORTE(1);							//Enable Port E
 	PORTE->PCR[LED_RED_PIN] |= PORT_PCR_MUX(1);		//MUX 1, GPIO
 	PTE->PDDR |= 1<<LED_RED_PIN;									//Set red led as output
-	PTE->PSOR |= 1<<LED_RED_PIN;									//Clear red led
+	PTE->PSOR |= 1<<LED_RED_PIN;									//Set red led
 	
 	SIM->SCGC5 = SIM_SCGC5_PORTD(1);							//Enable Port D
 	PORTD->PCR[LED_GREEN_PIN] |= PORT_PCR_MUX(1);	//MUX 1, GPIO
 	PTD->PDDR |= 1<<LED_GREEN_PIN;								//Set green led as output
-	PTD->PSOR |= 1<<LED_GREEN_PIN;								//Clear green led
+	PTD->PSOR |= 1<<LED_GREEN_PIN;								//Set green led
 }
 
 void init_switch(){
@@ -107,8 +111,6 @@ void PORTC_PORTD_IRQHandler(void)
 void init_SysTick_interrupt(void){
 	// Line 115 in file system_MKL46Z4.c 
 	// uint32_t SystemCoreClock = DEFAULT_SYSTEM_CLOCK;
-	// Line 137 system_MKL46Z4.h
-  // #define DEFAULT_SYSTEM_CLOCK           20 971 520 U  
 	
 	SysTick->CTRL |= (1<<0); // Enables the counter
 	//Enables Systick exception request
@@ -116,19 +118,22 @@ void init_SysTick_interrupt(void){
 	// Choose the clock source is processor clock
 	SysTick->CTRL |= (1<<2);
 	
-	SysTick->LOAD = SystemCoreClock * 250 - 1;
 	SysTick->VAL = 0;
+	
+	SysTick->LOAD = SystemCoreClock;
+	
 }
 
-static bool isGreen;
+volatile static bool isGreen;
 void SysTick_Handler(void){
-	if(!isOn) return;
-	
-	PTE->PTOR |= 1<<LED_RED_PIN;
-	
-	if(isGreen)
+	if(isOn) {
+		if(isGreen)
 		PTD->PTOR |= 1<<LED_GREEN_PIN;
-	isGreen = !isGreen;
+		
+	  isGreen = !isGreen;
+	}else{
+	  PTE->PTOR |= 1<<LED_RED_PIN;
+	}
 }
 
 

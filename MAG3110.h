@@ -2,7 +2,7 @@
 #ifndef MAG3110_H
 #define MAG3110_H
 
-// Transmit <==========> Receive
+// Transmit and Receive
 void MAG3110_Write(uint8_t addr, uint8_t data);
 uint8_t MAG3110_Read(uint8_t addr);
 
@@ -19,6 +19,10 @@ int16_t MAG3110_y(void);
 int16_t MAG3110_z(void);
 
 // Read Angle
-uint16_t MAG3110_ReadAngle(void);
+extern float x_calib;
+extern float y_calib;
+float calibx();
+float caliby();
+float MAG3110_ReadAngle(void);
 
 #endif 

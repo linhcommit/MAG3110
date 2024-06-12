@@ -85,7 +85,6 @@ int i2c_write(I2C_Type *p, uint8_t data){
 	
 	// Page 719 RXAK = 0 when ACK signal was received
 	// <=> bit 0 in S register equals 0
-	// can it will not use 
 	return ((p->S & I2C_S_RXAK_MASK) == 0);
 }
 

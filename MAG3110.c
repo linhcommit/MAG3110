@@ -48,6 +48,7 @@ uint8_t MAG3110_Read(uint8_t addr){
 	WAIT_ACK(I2C0);
 	
 	uint8_t data = i2c_read(I2C0);
+	// delay to wait I2C0
 	WAIT_ACK(I2C0);
 	
 	STOP(I2C0);
@@ -88,14 +89,43 @@ int16_t MAG3110_z(void){
 
 // Find ANGLE
 
-uint16_t MAG3110_ReadAngle(void){
-		int16_t x = MAG3110_x() - 213;
-		int16_t y = MAG3110_y() + 251;
+float calibx() {
+	float minx = 30000;
+	float maxx = -30000;
+	for (int i = 0; i < 1000; i++) {
+		int16_t data = MAG3110_x();
+		if (data < minx) minx = (float)data;
+		if (data > maxx) maxx = (float)data;
+		DELAY();
+	}
+	return (minx + maxx) / 2.0;
+}
+
+float caliby() {
+	float miny = 30000;
+	float maxy = -30000;
+	for (int i = 0; i < 1000; i++) {
+		int16_t data = MAG3110_y();
+		if (data < miny) miny = (float)data;
+		if (data > maxy) maxy = (float)data;
+		DELAY();
+	}
+	return (miny + maxy) / 2.0;
+}
+
+float MAG3110_ReadAngle(void){
+		float x = MAG3110_x() - x_calib;
+		DELAY();
+		float y = MAG3110_y() - y_calib;
+		DELAY();
 		
-		double heading = atan2((double)y,(double)x)*57.2957;
-	
-		if(heading < 0) heading += 360;
-		return (uint16_t)heading;
+		float heading = atan2(y,x)*57.2957;
+		heading += 180;
+		
+//		char name[32];
+//		sprintf(name,"%d %d %g\n\r",x,y,heading);
+//		UART_SendString(name);
+		return heading;
 }
 
 
